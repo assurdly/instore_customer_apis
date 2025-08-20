@@ -6358,17 +6358,23 @@
 							},
 							"request": {
 								"method": "POST",
-								"header": [],
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{Token}}",
+										"type": "text"
+									}
+								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"action\": \"subscription.cancel\",\n    \"data\": {\n        \"customer_ref\": \"1234567890\",\n        \"biller_code\": \"\",\n        \"subscription_id\": \"\"\n    }\n}",
+									"raw": "{\n    \"action\": \"subscription.cancel\",\n    \"data\": {\n        \"customer_ref\": \"{{customer_ref}}\",\n        \"biller_code\": \"010\",\n        \"subscription_id\": \"18984\"\n    }\n}",
 									"options": {
 										"raw": {
 											"language": "json"
 										}
 									}
 								},
-								"url": "{{url}}/misc/cancel-sub",
+								"url": "{{base_url}}",
 								"description": "List of data to Cach offlne\n\n1. Accounts\n    \n    1. All accounts and their last balance\n        \n2. Loan Limits\n    \n3. Membership status\n    \n4. Onboard Approval Status"
 							},
 							"response": [
