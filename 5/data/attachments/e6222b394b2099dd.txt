@@ -1,0 +1,6 @@
+{
+    "action": "misc.get-banks",
+    "data": {
+        "customer_ref": ""
+    }
+}
