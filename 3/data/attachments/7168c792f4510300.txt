@@ -1,0 +1,12 @@
+{
+    "action": "misc.verify-user-id-details",
+  "data": {
+    "customer_ref": "2349032456062",
+    "nin": "54680797474",
+    "first_name": "Tarela",
+    "last_name": "Okurude",
+    "email": "",
+    "date_of_birth": "2001-10-09",
+    "phone_number": "09032456062"
+  }
+}
