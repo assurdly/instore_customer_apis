@@ -1,0 +1,9 @@
+{
+    "action" : "settings.change-password",
+    "data": {
+        "customer_ref":"1234567890123", 
+        "current_pin": "1234",
+        "new_pin": "1324",
+        "new_pin_confirmation": "1324"
+    }
+}
