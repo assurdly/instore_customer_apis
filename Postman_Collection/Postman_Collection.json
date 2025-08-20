@@ -6269,7 +6269,7 @@
 											"})\r",
 											"\r",
 											"pm.test(\"Check that provider response data is correct\", function () {\r",
-											"    pm.expect(jsonData.data.errors).to.be.an(\"object\");\r",
+											"    pm.expect(jsonData.data.errors).to.be.an(\"array\");\r",
 											"    pm.expect(jsonData.data.error).to.be.an(\"object\");\r",
 											"})"
 										],
