@@ -1,0 +1,8 @@
+{
+  "action": "auth.manage-biometrics",
+  "data": {
+    "customer_ref": "1234567890123",
+    "signature": "Biometric Signature",
+    "pin": "12345"
+  }
+}

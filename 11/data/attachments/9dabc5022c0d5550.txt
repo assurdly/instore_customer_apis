@@ -1,0 +1,18 @@
+{
+  "action": "auth.make-first-payment",
+  "data": {
+    "customer_ref": "2349032456062",
+    "country": "NG",
+    "first_name": "Tarela",
+    "last_name": "Okurude",
+    "email": "tarela@assurdly.com",
+    "date_of_birth": "2001-10-09",
+    "nin": "54680797474",
+    "membership_plan": "Free",
+    "membership_plan_amount": "0",
+    "membership_plan_frequency": "monthly",
+    "account_number": "2270251568",
+    "bank_code": "057",
+    "accepted_tnc": true
+  }
+}

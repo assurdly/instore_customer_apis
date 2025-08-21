@@ -1,0 +1,7 @@
+{
+    "action": "misc.get-utility",
+    "data": {
+        "customer_ref": "1234567890123",
+        "utilities": "get_tnc,get_privacy_policy"
+    }
+}

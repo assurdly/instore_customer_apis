@@ -1,0 +1,7 @@
+{
+    "action": "misc.get-utility",
+    "data": {
+        "customer_ref": "",
+        "utilities": "get_tnc,get_privacy_policy,get_countries,get_splash_screens,get_membership_plans,get_banner_messages,get_faqs,get_quick_amounts"
+    }
+}
