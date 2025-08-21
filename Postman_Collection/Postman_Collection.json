@@ -7377,7 +7377,7 @@
 													"\r",
 													"pm.test('Has message field', function(){ \r",
 													"    pm.expect(jsonData).to.have.property('message');\r",
-													"    pm.expect(jsonData.message).to.include(\"Invalid PIN\");\r",
+													"    pm.expect(jsonData.message).to.include(\"PIN is required\");\r",
 													"});"
 												],
 												"type": "text/javascript",
@@ -7405,7 +7405,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"action\" : \"settings.change-pin\",\n    \"data\": {\n        \"customer_ref\":\"{{customer_ref}}\", // 234 Format\n        \"current_pin\": \"{{wrong_pin}}\",\n        \"new_pin\": \"1324\",\n        \"new_pin_confirmation\": \"1324\"\n    }\n}",
+											"raw": "{\n    \"action\" : \"settings.change-pin\",\n    \"data\": {\n        \"customer_ref\":\"{{customer_ref}}\", // 234 Format\n        \"current_pin\": \"\",\n        \"new_pin\": \"1324\",\n        \"new_pin_confirmation\": \"1324\"\n    }\n}",
 											"options": {
 												"raw": {
 													"language": "json"
