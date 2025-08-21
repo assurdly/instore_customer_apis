@@ -6102,6 +6102,100 @@
 													"body": "{\n    \"status\": \"Successful\",\n    \"message\": \"Request processed successfully.\",\n    \"data\": {\n        \"provider_response_code\": \"00\",\n        \"provider\": \"PaywithAccount\",\n        \"errors\": null,\n        \"error\": null,\n        \"provider_response\": {\n            \"delivery_status\": \"logged\",\n            \"cost\": 100,\n            \"expires_on\": \"2025-03-25-12-50-16\",\n            \"ussd_code\": null,\n            \"prompt_message\": \"A message has been sent your WhatsApp ****14. Please retrieve the OTP from the message\",\n            \"reference\": \"af78ec77-2ec8-4357-b4e1-1f0e6f2fabc1\"\n        },\n        \"client_info\": null\n    }\n}"
 												}
 											]
+										},
+										{
+											"name": "Send OTP - Empty Customer Ref.",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "5bb6063d-ad54-4776-a350-cdd125caff40",
+														"exec": [
+															"const jsonData = pm.response.json();\r",
+															"\r",
+															"pm.test('Has status field', function(){ \r",
+															"    pm.expect(jsonData).to.have.property('status'); \r",
+															"});\r",
+															"\r",
+															"pm.test('Has message field', function(){ \r",
+															"    pm.expect(jsonData).to.have.property('message');\r",
+															"    pm.expect(jsonData.message).to.include('Request processed successfully');\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"id": "3faf677f-3854-49a8-9902-49c3a9fb122d",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json",
+														"type": "text"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer {{Token}}",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"action\": \"auth.send-login-otp\",\n    \"data\": {\n        \"customer_ref\": \"{{customer_ref}}\", // 234 Format\n        \"biller_code\": \"{{biller_code}}\" // send this when you have it\n    }\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{base_url}}"
+											},
+											"response": [
+												{
+													"id": "e4d9d633-1c5a-4aab-a356-cf24350ab91c",
+													"name": "Send Login OTP",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"action\": \"auth.send-login-otp\",\n    \"data\": {\n        \"customer_ref\": \"1234567890123\", // 234 Format\n        \"biller_code\": \"biller_code\",\n    }\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{url}}/auth/login-otp"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json",
+															"description": "",
+															"type": "text"
+														}
+													],
+													"cookie": [
+														{
+															"expires": "Invalid Date",
+															"domain": "",
+															"path": ""
+														}
+													],
+													"responseTime": null,
+													"body": "{\n    \"status\": \"Successful\",\n    \"message\": \"Request processed successfully.\",\n    \"data\": {\n        \"provider_response_code\": \"00\",\n        \"provider\": \"PaywithAccount\",\n        \"errors\": null,\n        \"error\": null,\n        \"provider_response\": {\n            \"delivery_status\": \"logged\",\n            \"cost\": 100,\n            \"expires_on\": \"2025-03-25-12-50-16\",\n            \"ussd_code\": null,\n            \"prompt_message\": \"A message has been sent your WhatsApp ****14. Please retrieve the OTP from the message\",\n            \"reference\": \"af78ec77-2ec8-4357-b4e1-1f0e6f2fabc1\"\n        },\n        \"client_info\": null\n    }\n}"
+												}
+											]
 										}
 									],
 									"id": "5c8bb1a7-f7d5-421a-8943-903a23d520ce"
