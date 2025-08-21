@@ -5462,7 +5462,7 @@
 											]
 										},
 										{
-											"name": "Verify OTP [R] - Empty Customer Ref Copy",
+											"name": "Verify OTP [R] - Wrong OTP",
 											"event": [
 												{
 													"listen": "test",
