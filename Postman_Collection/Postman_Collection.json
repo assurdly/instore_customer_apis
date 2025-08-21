@@ -6486,35 +6486,20 @@
 									"id": "5c8bb1a7-f7d5-421a-8943-903a23d520ce"
 								},
 								{
-									"name": "Verify OTP [R]",
-									"id": "dd801b79-9c92-45d2-9f55-8b9e2c07ff2a",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n    \"action\": \"auth.verify-otp\",\n    \"data\": {\n        \"customer_ref\": \"1234567890123\", // 234 Format\n        \"otp\": \"12345\",\n        \"otp_reference\": \"otp_reference\",\n        \"biller_code\": \"biller_code\",\n        // optional\n        \"use_agent\": \"unique-mobile-app-phone-id\",\n        \"ip_address\": \"ip address\"\n    }\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{url}}/auth/validate-otp"
-									},
-									"response": [
+									"name": "Verify OTP",
+									"item": [
 										{
-											"id": "7f7d9fe5-636f-4175-b6ca-620f77af36e7",
-											"name": "Verify OTP",
-											"originalRequest": {
+											"name": "Verify OTP [R]",
+											"id": "dd801b79-9c92-45d2-9f55-8b9e2c07ff2a",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
 												"method": "POST",
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n    \"action\": \"auth.validate-login-otp\",\n    \"data\": {\n        \"customer_ref\": \"1234567890123\", // 234 Format\n        \"otp\": \"12345\",\n        \"otp_reference\": \"otp_reference\",\n        \"biller_code\": \"biller_code\",\n        \"use_agent\": \"unique-mobile-app-phone-id\",\n        \"ip_address\" : \"ip address\"\n    }\n}",
+													"raw": "{\n    \"action\": \"auth.verify-otp\",\n    \"data\": {\n        \"customer_ref\": \"1234567890123\", // 234 Format\n        \"otp\": \"12345\",\n        \"otp_reference\": \"otp_reference\",\n        \"biller_code\": \"biller_code\",\n        // optional\n        \"use_agent\": \"unique-mobile-app-phone-id\",\n        \"ip_address\": \"ip address\"\n    }\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -6523,28 +6508,49 @@
 												},
 												"url": "{{url}}/auth/validate-otp"
 											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": "json",
-											"header": [
+											"response": [
 												{
-													"key": "Content-Type",
-													"value": "application/json",
-													"description": "",
-													"type": "text"
+													"id": "7f7d9fe5-636f-4175-b6ca-620f77af36e7",
+													"name": "Verify OTP",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"action\": \"auth.validate-login-otp\",\n    \"data\": {\n        \"customer_ref\": \"1234567890123\", // 234 Format\n        \"otp\": \"12345\",\n        \"otp_reference\": \"otp_reference\",\n        \"biller_code\": \"biller_code\",\n        \"use_agent\": \"unique-mobile-app-phone-id\",\n        \"ip_address\" : \"ip address\"\n    }\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{url}}/auth/validate-otp"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json",
+															"description": "",
+															"type": "text"
+														}
+													],
+													"cookie": [
+														{
+															"expires": "Invalid Date",
+															"domain": "",
+															"path": ""
+														}
+													],
+													"responseTime": null,
+													"body": "{\n    \"status\": \"Successful\",\n    \"message\": \"OTP validated successfully.\",\n    \"data\": {\n        \"provider_response_code\": \"00\",\n        \"provider\": \"PaywithAccount\",\n        \"errors\": null,\n        \"error\": null,\n        \"provider_response\": {\n            \"cost\": 500,\n            \"reference\": \"ab806bf5-229e-4ccb-a875-0f68338e93a3\"\n        },\n        \"client_info\": null\n    }\n}"
 												}
-											],
-											"cookie": [
-												{
-													"expires": "Invalid Date",
-													"domain": "",
-													"path": ""
-												}
-											],
-											"responseTime": null,
-											"body": "{\n    \"status\": \"Successful\",\n    \"message\": \"OTP validated successfully.\",\n    \"data\": {\n        \"provider_response_code\": \"00\",\n        \"provider\": \"PaywithAccount\",\n        \"errors\": null,\n        \"error\": null,\n        \"provider_response\": {\n            \"cost\": 500,\n            \"reference\": \"ab806bf5-229e-4ccb-a875-0f68338e93a3\"\n        },\n        \"client_info\": null\n    }\n}"
+											]
 										}
-									]
+									],
+									"id": "7ffd07b5-af0c-41c6-bf6c-75283d04a2d8"
 								}
 							],
 							"id": "4c4036ae-62fa-46fd-9c71-1e30f0d78221"
