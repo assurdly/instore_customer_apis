@@ -6593,6 +6593,100 @@
 													"body": "{\n    \"status\": \"Successful\",\n    \"message\": \"OTP validated successfully.\",\n    \"data\": {\n        \"provider_response_code\": \"00\",\n        \"provider\": \"PaywithAccount\",\n        \"errors\": null,\n        \"error\": null,\n        \"provider_response\": {\n            \"cost\": 500,\n            \"reference\": \"ab806bf5-229e-4ccb-a875-0f68338e93a3\"\n        },\n        \"client_info\": null\n    }\n}"
 												}
 											]
+										},
+										{
+											"name": "Verify OTP [R] - Success Copy",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "3bf3c873-10f4-4fca-b106-f94970e3c154",
+														"exec": [
+															"const jsonData = pm.response.json();\r",
+															"\r",
+															"pm.test('Has status field', function(){\r",
+															" pm.expect(jsonData).to.have.property('status'); \r",
+															"});\r",
+															"\r",
+															"pm.test('Has message field', function(){\r",
+															" pm.expect(jsonData).to.have.property('message');\r",
+															"    pm.expect(jsonData.message).to.include('Validation successful');\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"id": "ac71dfc9-cd4f-48b9-9078-bf7b64619e76",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json",
+														"type": "text"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer {{Token}}",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"action\": \"auth.verify-otp\",\n    \"data\": {\n        \"customer_ref\": \"{{customer_ref}}\", // 234 Format\n        \"otp\": \"{{otp}}\",\n        \"otp_reference\": \"{{otp_reference}}\",\n        \"biller_code\": \"{{biller_code}}\",\n        // optional\n        \"user_agent\": \"{{use_agent}}\",\n        \"ip_address\": \"{{ip_address}}\"\n    }\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{base_url}}"
+											},
+											"response": [
+												{
+													"id": "fac3011c-99f3-45c2-be4e-1b735f556c40",
+													"name": "Verify OTP",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"action\": \"auth.validate-login-otp\",\n    \"data\": {\n        \"customer_ref\": \"1234567890123\", // 234 Format\n        \"otp\": \"12345\",\n        \"otp_reference\": \"otp_reference\",\n        \"biller_code\": \"biller_code\",\n        \"use_agent\": \"unique-mobile-app-phone-id\",\n        \"ip_address\" : \"ip address\"\n    }\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{url}}/auth/validate-otp"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json",
+															"description": "",
+															"type": "text"
+														}
+													],
+													"cookie": [
+														{
+															"expires": "Invalid Date",
+															"domain": "",
+															"path": ""
+														}
+													],
+													"responseTime": null,
+													"body": "{\n    \"status\": \"Successful\",\n    \"message\": \"OTP validated successfully.\",\n    \"data\": {\n        \"provider_response_code\": \"00\",\n        \"provider\": \"PaywithAccount\",\n        \"errors\": null,\n        \"error\": null,\n        \"provider_response\": {\n            \"cost\": 500,\n            \"reference\": \"ab806bf5-229e-4ccb-a875-0f68338e93a3\"\n        },\n        \"client_info\": null\n    }\n}"
+												}
+											]
 										}
 									],
 									"id": "7ffd07b5-af0c-41c6-bf6c-75283d04a2d8"
