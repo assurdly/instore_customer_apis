@@ -1,0 +1,6 @@
+{
+    "action" : "misc.get-customer",
+    "data": {
+        "customer_ref":"1234567890123" 
+    }
+}

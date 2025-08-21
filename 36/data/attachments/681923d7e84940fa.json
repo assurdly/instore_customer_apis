@@ -1,0 +1,11 @@
+{
+    "Date": "Thu, 21 Aug 2025 12:00:36 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "X-Powered-By": "Express",
+    "Access-Control-Allow-Origin": "*",
+    "ETag": "W/\"41a-1G7fBv1Sr1tNLIhscALCTTD22Ko\"",
+    "Vary": "Accept-Encoding",
+    "Content-Encoding": "br"
+}
