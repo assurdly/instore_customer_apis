@@ -5437,7 +5437,29 @@
 											]
 										},
 										{
-											"name": "Set new  Password [R] - Success Copy",
+											"name": "Set new  Password [R] - Password Confirmation Mismatch",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "fbfea276-255c-4480-8c0b-399291435d28",
+														"exec": [
+															"const jsonData = pm.response.json();\r",
+															"\r",
+															"pm.test('Has status field', function(){ \r",
+															"    pm.expect(jsonData).to.have.property('status'); \r",
+															"});\r",
+															"\r",
+															"pm.test('Has message field', function(){ \r",
+															"    pm.expect(jsonData).to.have.property('message');\r",
+															"    pm.expect(jsonData.message).to.include('Transaction failed');\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
 											"id": "9cc91858-594c-4f22-944e-d4c4a141335b",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
