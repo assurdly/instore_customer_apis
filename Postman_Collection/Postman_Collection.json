@@ -7752,7 +7752,8 @@
 													"const jsonData = pm.response.json();\r",
 													"\r",
 													"pm.test('Has status field', function(){ \r",
-													"    pm.expect(jsonData).to.have.property('status'); \r",
+													"    pm.expect(jsonData).to.have.property('status');\r",
+													"    pm.expect(jsonData.status).to.eql(\"Failed\");\r",
 													"});\r",
 													"\r",
 													"pm.test('Has message field', function(){ \r",
@@ -7779,8 +7780,9 @@
 											},
 											{
 												"key": "Authorization",
-												"value": "Bearer {{wrong_token}}",
-												"type": "text"
+												"value": "Bearer {{Token}}",
+												"type": "text",
+												"disabled": true
 											}
 										],
 										"body": {
