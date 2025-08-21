@@ -6011,23 +6011,56 @@
 									"item": [
 										{
 											"name": "Send OTP - Success",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "5bb6063d-ad54-4776-a350-cdd125caff40",
+														"exec": [
+															"const jsonData = pm.response.json();\r",
+															"\r",
+															"pm.test('Has status field', function(){ \r",
+															"    pm.expect(jsonData).to.have.property('status'); \r",
+															"});\r",
+															"\r",
+															"pm.test('Has message field', function(){ \r",
+															"    pm.expect(jsonData).to.have.property('message');\r",
+															"    pm.expect(jsonData.message).to.include('Request processed successfully');\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
 											"id": "d8a9325e-c6e2-4513-b1b4-9fdbeecc8cc5",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
 											},
 											"request": {
 												"method": "POST",
-												"header": [],
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json",
+														"type": "text"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer {{Token}}",
+														"type": "text"
+													}
+												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n    \"action\": \"auth.send-login-otp\",\n    \"data\": {\n        \"customer_ref\": \"1234567890123\", // 234 Format\n        \"biller_code\": \"biller_code\" // send this when you have it\n    }\n}",
+													"raw": "{\n    \"action\": \"auth.send-login-otp\",\n    \"data\": {\n        \"customer_ref\": \"{{customer_ref}}\", // 234 Format\n        \"biller_code\": \"{{biller_code}}\" // send this when you have it\n    }\n}",
 													"options": {
 														"raw": {
 															"language": "json"
 														}
 													}
 												},
-												"url": "{{url}}/auth/login-otp"
+												"url": "{{base_url}}"
 											},
 											"response": [
 												{
