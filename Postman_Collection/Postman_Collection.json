@@ -7077,7 +7077,7 @@
 							"name": "Change PIN",
 							"item": [
 								{
-									"name": "Change Pin [R]",
+									"name": "Change Pin [R] - Success",
 									"id": "566cb46e-e89a-45e5-a8ea-b1aa853cfac1",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -7100,6 +7100,68 @@
 									"response": [
 										{
 											"id": "074145e6-93b3-4df0-8550-3ce949276809",
+											"name": "Change Pin",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"action\" : \"settings.change-pin\",\n    \"data\": {\n        \"customer_ref\":\"1234567890123\", // 234 Format\n        \"current_pin\": \"1234\",\n        \"new_pin\": \"1324\",\n        \"new_pin_confirmation\": \"1324\"\n    }\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{url}}/settings/change-pin"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"description": "",
+													"type": "text"
+												}
+											],
+											"cookie": [
+												{
+													"expires": "Invalid Date",
+													"domain": "",
+													"path": ""
+												}
+											],
+											"responseTime": null,
+											"body": "{\n    \"status\": \"Successful\",\n    \"message\": \"Transaction processed successfully\",\n    \"data\": {\n        \"provider_response_code\": \"00\",\n        \"provider\": \"PaywithAccount\",\n        \"errors\": null,\n        \"error\": null,\n        \"provider_response\": {\n            \"status\": \"ACTIVE\",\n            \"created_on\": \"2020-04-05 23:08:01\",\n            \"meta\": {}\n        },\n        \"client_info\": {\n            \"name\": null,\n            \"id\": null,\n            \"bank_cbn_code\": null,\n            \"bank_name\": null,\n            \"console_url\": null,\n            \"js_background_image\": null,\n            \"css_url\": null,\n            \"logo_url\": null,\n            \"footer_text\": null,\n            \"show_options_icon\": false,\n            \"paginate\": false,\n            \"paginate_count\": 0,\n            \"options\": null,\n            \"merchant\": null,\n            \"colors\": null,\n            \"meta\": null\n        }\n    }\n}"
+										}
+									]
+								},
+								{
+									"name": "Change Pin [R] - Success Copy",
+									"id": "459aeeaf-9180-4504-bdf7-44afc8889a33",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"action\" : \"settings.change-pin\",\n    \"data\": {\n        \"customer_ref\":\"1234567890123\", // 234 Format\n        \"current_pin\": \"1234\",\n        \"new_pin\": \"1324\",\n        \"new_pin_confirmation\": \"1324\"\n    }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{url}}/settings/change-pin",
+										"description": "List of data to Cach offlne\n\n1. Accounts\n    \n    1. All accounts and their last balance\n        \n2. Loan Limits\n    \n3. Membership status\n    \n4. Onboard Approval Status"
+									},
+									"response": [
+										{
+											"id": "146b648d-c408-4eee-84e3-bef0f252978f",
 											"name": "Change Pin",
 											"originalRequest": {
 												"method": "POST",
