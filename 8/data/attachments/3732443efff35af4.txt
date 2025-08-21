@@ -1,0 +1,6 @@
+{
+  "action": "auth.logout",
+  "data": {
+    "customer_ref": "1234567890123"
+  }
+}
