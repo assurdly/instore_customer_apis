@@ -1,0 +1,15 @@
+{
+    "action": "dashboard.customer",
+    "data": {
+        "customer_ref": "1234567890",
+        "biller_code": "biller_code",
+
+        
+        "start_date": "start_date",
+        "end_date": "end_date",
+        "status": "status",
+        "min_amount": "min_amount",
+        "max_amount": "max_amount",
+        "narration": "narration"
+    }
+}
