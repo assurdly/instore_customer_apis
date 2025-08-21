@@ -1,0 +1,12 @@
+{
+    "action": "subscription.create",
+    "data": {
+        "customer_ref": "",
+        "membership_plan": "Test",
+        "membership_plan_amount": "200",
+        "membership_plan_frequency": "weekly",
+        "account_number": "2212979372",
+        "bank_code": "057",
+        "biller_code": "010"
+    }
+}
