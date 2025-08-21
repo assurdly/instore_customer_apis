@@ -1,9 +1,0 @@
-{
-    "action": "auth.create-pin",
-    "data": {
-        "customer_ref": "1234567890123", 
-        "biller_code": "biller_code",
-        "pin": "",
-        "pin_confirmation": "12345"
-    }
-}
