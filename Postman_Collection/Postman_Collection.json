@@ -6489,7 +6489,7 @@
 									"name": "Verify OTP",
 									"item": [
 										{
-											"name": "Verify OTP [R]",
+											"name": "Verify OTP [R] - Success",
 											"id": "dd801b79-9c92-45d2-9f55-8b9e2c07ff2a",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
