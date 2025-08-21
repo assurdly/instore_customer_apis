@@ -1,0 +1,7 @@
+{
+  "action": "auth.send-login-otp",
+  "data": {
+    "customer_ref": "08012345678",
+    "biller_code": "biller_code"
+  }
+}
