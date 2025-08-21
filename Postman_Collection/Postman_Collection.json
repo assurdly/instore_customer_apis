@@ -6704,7 +6704,7 @@
 															"\r",
 															"pm.test('Has message field', function(){\r",
 															" pm.expect(jsonData).to.have.property('message');\r",
-															"    pm.expect(jsonData.message).to.include('Transaction failed');\r",
+															"    pm.expect(jsonData.message).to.include('Customer ref required');\r",
 															"});"
 														],
 														"type": "text/javascript",
@@ -6732,7 +6732,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n    \"action\": \"auth.verify-otp\",\n    \"data\": {\n        \"customer_ref\": \"{{customer_ref}}\", // 234 Format\n        \"otp\": \"00000\",\n        \"otp_reference\": \"{{otp_reference}}\",\n        \"biller_code\": \"{{biller_code}}\",\n        // optional\n        \"user_agent\": \"{{use_agent}}\",\n        \"ip_address\": \"{{ip_address}}\"\n    }\n}",
+													"raw": "{\n    \"action\": \"auth.verify-otp\",\n    \"data\": {\n        \"customer_ref\": \"\", // 234 Format\n        \"otp\": \"{{otp}}\",\n        \"otp_reference\": \"{{otp_reference}}\",\n        \"biller_code\": \"{{biller_code}}\",\n        // optional\n        \"user_agent\": \"{{use_agent}}\",\n        \"ip_address\": \"{{ip_address}}\"\n    }\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -6744,6 +6744,100 @@
 											"response": [
 												{
 													"id": "410bdedb-ac6f-4cc7-96b8-f88aaab2d895",
+													"name": "Verify OTP",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"action\": \"auth.validate-login-otp\",\n    \"data\": {\n        \"customer_ref\": \"1234567890123\", // 234 Format\n        \"otp\": \"12345\",\n        \"otp_reference\": \"otp_reference\",\n        \"biller_code\": \"biller_code\",\n        \"use_agent\": \"unique-mobile-app-phone-id\",\n        \"ip_address\" : \"ip address\"\n    }\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{url}}/auth/validate-otp"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json",
+															"description": "",
+															"type": "text"
+														}
+													],
+													"cookie": [
+														{
+															"expires": "Invalid Date",
+															"domain": "",
+															"path": ""
+														}
+													],
+													"responseTime": null,
+													"body": "{\n    \"status\": \"Successful\",\n    \"message\": \"OTP validated successfully.\",\n    \"data\": {\n        \"provider_response_code\": \"00\",\n        \"provider\": \"PaywithAccount\",\n        \"errors\": null,\n        \"error\": null,\n        \"provider_response\": {\n            \"cost\": 500,\n            \"reference\": \"ab806bf5-229e-4ccb-a875-0f68338e93a3\"\n        },\n        \"client_info\": null\n    }\n}"
+												}
+											]
+										},
+										{
+											"name": "Verify OTP [R] - Empty Biller Code",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "3bf3c873-10f4-4fca-b106-f94970e3c154",
+														"exec": [
+															"const jsonData = pm.response.json();\r",
+															"\r",
+															"pm.test('Has status field', function(){\r",
+															" pm.expect(jsonData).to.have.property('status'); \r",
+															"});\r",
+															"\r",
+															"pm.test('Has message field', function(){\r",
+															" pm.expect(jsonData).to.have.property('message');\r",
+															"    pm.expect(jsonData.message).to.include('Customer ref required');\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"id": "430ca729-e118-4bd9-b03a-582e9f02be5b",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json",
+														"type": "text"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer {{Token}}",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"action\": \"auth.verify-otp\",\n    \"data\": {\n        \"customer_ref\": \"\", // 234 Format\n        \"otp\": \"{{otp}}\",\n        \"otp_reference\": \"{{otp_reference}}\",\n        \"biller_code\": \"{{biller_code}}\",\n        // optional\n        \"user_agent\": \"{{use_agent}}\",\n        \"ip_address\": \"{{ip_address}}\"\n    }\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{base_url}}"
+											},
+											"response": [
+												{
+													"id": "3af021d4-47ca-44ff-bd72-13c4ef1616d1",
 													"name": "Verify OTP",
 													"originalRequest": {
 														"method": "POST",
