@@ -5267,12 +5267,12 @@
 															"const jsonData = pm.response.json();\r",
 															"\r",
 															"pm.test('Has status field', function(){\r",
-															" pm.expect(json).to.have.property('status'); \r",
+															" pm.expect(jsonData).to.have.property('status'); \r",
 															"});\r",
 															"\r",
 															"pm.test('Has message field', function(){\r",
-															" pm.expect(json).to.have.property('message');\r",
-															"    pm.expect(json.message).to.exist.and.not.be.empty;\r",
+															" pm.expect(jsonData).to.have.property('message');\r",
+															"    pm.expect(jsonData.message).to.exist.and.not.be.empty;\r",
 															"});\r",
 															"\r",
 															""
@@ -5302,7 +5302,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n    \"action\": \"auth.verify-otp\",\n    \"data\": {\n        \"customer_ref\": \"1234567890123\", // 234 Format\n        \"otp\": \"12345\",\n        \"otp_reference\": \"otp_reference\",\n        \"biller_code\": \"biller_code\",\n        // optional\n        \"use_agent\": \"unique-mobile-app-phone-id\",\n        \"ip_address\": \"ip address\"\n    }\n}",
+													"raw": "{\n    \"action\": \"auth.verify-otp\",\n    \"data\": {\n        \"customer_ref\": \"{{customer_ref}}\", // 234 Format\n        \"otp\": \"{{otp}}\",\n        \"otp_reference\": \"{{otp_reference}}\",\n        \"biller_code\": \"{{biller_code}}\",\n        // optional\n        \"user_agent\": \"{{use_agent}}\",\n        \"ip_address\": \"{{ip_address}}\"\n    }\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -5361,6 +5361,11 @@
 						{
 							"name": "Reset Password (For Billers Only)",
 							"item": [
+								{
+									"name": "New Folder",
+									"item": [],
+									"id": "79f62f73-4a75-47f3-82d2-cff735af2f81"
+								},
 								{
 									"name": "Set new  Password [R]",
 									"id": "2992721c-27f0-4407-86de-64d6a49fe636",
