@@ -3601,6 +3601,7 @@
 													"",
 													"pm.test('Has status field', function(){ ",
 													"    pm.expect(jsonData).to.have.property('status'); ",
+													"    pm.expect(jsonData.status).to.eql('Failed');   ",
 													"});",
 													"",
 													"pm.test('Has message field', function(){ ",
@@ -5192,8 +5193,9 @@
 													},
 													{
 														"key": "Authorization",
-														"value": "Bearer {{wrong_token}}",
-														"type": "text"
+														"value": "Bearer {{Token}}",
+														"type": "text",
+														"disabled": true
 													}
 												],
 												"body": {
@@ -5639,6 +5641,11 @@
 								}
 							],
 							"id": "dde68ea5-cf81-4ac1-b6f0-777efaf89829"
+						},
+						{
+							"name": "New Folder",
+							"item": [],
+							"id": "2a57e05f-8db4-4782-9aad-db10af02c2d5"
 						}
 					],
 					"id": "878eb738-d7a6-4c37-959f-8ba011e34037"
