@@ -1,0 +1,6 @@
+{
+  "action": "auth.login",
+  "data": {
+    "customer_ref": "2348012345678"
+  }
+}

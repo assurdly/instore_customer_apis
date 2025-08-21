@@ -1,0 +1,8 @@
+{
+    "action": "misc.lookup-bank-account",
+    "data": {
+        "customer_ref": "1234567890123",
+        "account_number": "2212979372",
+        "bank_code": "057"
+    }
+}
