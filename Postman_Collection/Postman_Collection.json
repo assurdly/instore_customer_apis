@@ -5258,13 +5258,52 @@
 									"item": [
 										{
 											"name": "Verify OTP [R] - Success",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "23a62f2f-d31e-44c9-a117-e4e163976dbb",
+														"exec": [
+															"const jsonData = pm.response.json();\r",
+															"\r",
+															"pm.test('Status code 200', function () {\r",
+															"  pm.response.to.have.status(200); \r",
+															"  });\r",
+															"\r",
+															"pm.test('Has status field', function(){\r",
+															" pm.expect(json).to.have.property('status'); \r",
+															"});\r",
+															"\r",
+															"pm.test('Has message field', function(){\r",
+															" pm.expect(json).to.have.property('message');\r",
+															"    pm.expect(json.message).to.exist.and.not.be.empty;\r",
+															"});\r",
+															"\r",
+															""
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
 											"id": "cdee08d7-6df0-43fa-ab60-dde26140afae",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
 											},
 											"request": {
 												"method": "POST",
-												"header": [],
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json",
+														"type": "text"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer {{Token}}",
+														"type": "text"
+													}
+												],
 												"body": {
 													"mode": "raw",
 													"raw": "{\n    \"action\": \"auth.verify-otp\",\n    \"data\": {\n        \"customer_ref\": \"1234567890123\", // 234 Format\n        \"otp\": \"12345\",\n        \"otp_reference\": \"otp_reference\",\n        \"biller_code\": \"biller_code\",\n        // optional\n        \"use_agent\": \"unique-mobile-app-phone-id\",\n        \"ip_address\": \"ip address\"\n    }\n}",
@@ -5274,7 +5313,7 @@
 														}
 													}
 												},
-												"url": "{{url}}/auth/validate-otp"
+												"url": "{{base_url}}"
 											},
 											"response": [
 												{
