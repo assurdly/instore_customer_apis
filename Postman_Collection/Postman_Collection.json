@@ -6502,23 +6502,56 @@
 									"item": [
 										{
 											"name": "Verify OTP [R] - Success",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "3bf3c873-10f4-4fca-b106-f94970e3c154",
+														"exec": [
+															"const jsonData = pm.response.json();\r",
+															"\r",
+															"pm.test('Has status field', function(){\r",
+															" pm.expect(jsonData).to.have.property('status'); \r",
+															"});\r",
+															"\r",
+															"pm.test('Has message field', function(){\r",
+															" pm.expect(jsonData).to.have.property('message');\r",
+															"    pm.expect(jsonData.message).to.include('Validation successful');\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
 											"id": "dd801b79-9c92-45d2-9f55-8b9e2c07ff2a",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
 											},
 											"request": {
 												"method": "POST",
-												"header": [],
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json",
+														"type": "text"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer {{Token}}",
+														"type": "text"
+													}
+												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n    \"action\": \"auth.verify-otp\",\n    \"data\": {\n        \"customer_ref\": \"1234567890123\", // 234 Format\n        \"otp\": \"12345\",\n        \"otp_reference\": \"otp_reference\",\n        \"biller_code\": \"biller_code\",\n        // optional\n        \"use_agent\": \"unique-mobile-app-phone-id\",\n        \"ip_address\": \"ip address\"\n    }\n}",
+													"raw": "{\n    \"action\": \"auth.verify-otp\",\n    \"data\": {\n        \"customer_ref\": \"{{customer_ref}}\", // 234 Format\n        \"otp\": \"{{otp}}\",\n        \"otp_reference\": \"{{otp_reference}}\",\n        \"biller_code\": \"{{biller_code}}\",\n        // optional\n        \"user_agent\": \"{{use_agent}}\",\n        \"ip_address\": \"{{ip_address}}\"\n    }\n}",
 													"options": {
 														"raw": {
 															"language": "json"
 														}
 													}
 												},
-												"url": "{{url}}/auth/validate-otp"
+												"url": "{{base_url}}"
 											},
 											"response": [
 												{
