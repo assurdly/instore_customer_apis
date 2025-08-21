@@ -8433,17 +8433,28 @@
 									},
 									"request": {
 										"method": "POST",
-										"header": [],
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{Token}}",
+												"type": "text"
+											}
+										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"action\" : \"settings.change-password\",\n    \"data\": {\n        \"customer_ref\":\"1234567890123\", // 234 Format\n        \"current_pin\": \"1234\",\n        \"new_pin\": \"1324\",\n        \"new_pin_confirmation\": \"1324\"\n    }\n}",
+											"raw": "{\n    \"action\" : \"settings.change-password\",\n    \"data\": {\n        \"customer_ref\":\"{{customer_ref}}\", // 234 Format\n        \"current_pin\": \"1234\",\n        \"new_pin\": \"1324\",\n        \"new_pin_confirmation\": \"1324\"\n    }\n}",
 											"options": {
 												"raw": {
 													"language": "json"
 												}
 											}
 										},
-										"url": "{{url}}/auth/create-password",
+										"url": "{{base_url}}",
 										"description": "List of data to Cach offlne\n\n1. Accounts\n    \n    1. All accounts and their last balance\n        \n2. Loan Limits\n    \n3. Membership status\n    \n4. Onboard Approval Status"
 									},
 									"response": [
