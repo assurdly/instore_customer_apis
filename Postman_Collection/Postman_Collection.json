@@ -4149,7 +4149,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"action\": \"auth.create-pin\",\n    \"data\": {\n        \"customer_ref\": \"1234567890123\", // 234 Format\n        \"biller_code\": \"biller_code\",\n        \"pin\": \"12345\",\n        \"pin_confirmation\": \"12345\"\n    }\n}",
+											"raw": "{\n    \"action\": \"auth.create-pin\",\n    \"data\": {\n        \"customer_ref\": \"{{customer_ref}}\", // 234 Format\n        \"biller_code\": \"biller_code\",\n        \"pin\": \"{{pin}}\",\n        \"pin_confirmation\": \"{{pin}}\"\n    }\n}",
 											"options": {
 												"raw": {
 													"language": "json"
