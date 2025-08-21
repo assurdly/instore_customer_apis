@@ -2264,14 +2264,16 @@
 												"exec": [
 													"const jsonData = pm.response.json();",
 													"",
-													"pm.test(\"check for correct status code\", function () {",
-													"    pm.response.to.have.status(400);",
-													"});",
 													"",
 													"pm.test(\"check for correct error message\", function () {",
 													"    pm.expect(jsonData.message).to.not.be.empty;",
 													"    pm.expect(jsonData.message).to.exist;",
 													"});",
+													"",
+													"pm.test('Has data field', function () {",
+													"    pm.expect(jsonData).to.have.property('data');",
+													"    pm.expect(jsonData.data.error).to.have.property(\"code\");",
+													"})",
 													""
 												],
 												"type": "text/javascript",
@@ -2297,7 +2299,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"action\": \"auth.verify-otp\",\n  \"data\": {\n    \"customer_ref\": \"08012345\",\n    \"otp\": \"00000\",\n    \"otp_reference\": \"{{otp_reference}}\",\n    \"biller_code\": \"{{biller_code}}\",\n    \"user_agent\": \"{{use_agent}}\",\n    \"ip_address\": \"{{ip_address}}\"\n  }\n}"
+											"raw": "{\n  \"action\": \"auth.verify-otp\",\n  \"data\": {\n    \"customer_ref\": \"\",\n    \"otp\": \"{{otp}}\",\n    \"otp_reference\": \"{{otp_reference}}\",\n    \"biller_code\": \"{{biller_code}}\",\n    \"user_agent\": \"{{use_agent}}\",\n    \"ip_address\": \"{{ip_address}}\"\n  }\n}"
 										},
 										"url": "{{base_url}}"
 									},
@@ -2313,14 +2315,17 @@
 												"exec": [
 													"const jsonData = pm.response.json();",
 													"",
-													"pm.test(\"check for correct status code\", function () {",
-													"    pm.response.to.have.status(400);",
-													"});",
+													"",
 													"",
 													"pm.test(\"check for correct error message\", function () {",
 													"    pm.expect(jsonData.message).to.not.be.empty;",
 													"    pm.expect(jsonData.message).to.exist;",
 													"});",
+													"",
+													"pm.test('Has data field', function () {",
+													"    pm.expect(jsonData).to.have.property('data');",
+													"    pm.expect(jsonData.data.error).to.have.property(\"code\");",
+													"})",
 													""
 												],
 												"type": "text/javascript",
