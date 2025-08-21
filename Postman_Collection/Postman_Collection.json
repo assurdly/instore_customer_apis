@@ -7662,7 +7662,7 @@
 													"\r",
 													"pm.test('Has message field', function(){ \r",
 													"    pm.expect(jsonData).to.have.property('message');\r",
-													"    pm.expect(jsonData.message).to.include(\"New PIN Confirmation is required\");\r",
+													"    pm.expect(jsonData.message).to.include(\"Invalid Header details\");\r",
 													"});"
 												],
 												"type": "text/javascript",
@@ -7684,13 +7684,13 @@
 											},
 											{
 												"key": "Authorization",
-												"value": "Bearer {{Token}}",
+												"value": "Bearer {{wrong_token}}",
 												"type": "text"
 											}
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"action\" : \"settings.change-pin\",\n    \"data\": {\n        \"customer_ref\":\"{{customer_ref}}\", // 234 Format\n        \"current_pin\": \"{{pin}}\",\n        \"new_pin\": \"1324\",\n        \"new_pin_confirmation\": \"\"\n    }\n}",
+											"raw": "{\n    \"action\" : \"settings.change-pin\",\n    \"data\": {\n        \"customer_ref\":\"{{customer_ref}}\", // 234 Format\n        \"current_pin\": \"{{pin}}\",\n        \"new_pin\": \"1324\",\n        \"new_pin_confirmation\": \"1324\"\n    }\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -7703,6 +7703,101 @@
 									"response": [
 										{
 											"id": "16826409-f331-44e8-87da-bb16f7d9f1bb",
+											"name": "Change Pin",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"action\" : \"settings.change-pin\",\n    \"data\": {\n        \"customer_ref\":\"1234567890123\", // 234 Format\n        \"current_pin\": \"1234\",\n        \"new_pin\": \"1324\",\n        \"new_pin_confirmation\": \"1324\"\n    }\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{url}}/settings/change-pin"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"description": "",
+													"type": "text"
+												}
+											],
+											"cookie": [
+												{
+													"expires": "Invalid Date",
+													"domain": "",
+													"path": ""
+												}
+											],
+											"responseTime": null,
+											"body": "{\n    \"status\": \"Successful\",\n    \"message\": \"Transaction processed successfully\",\n    \"data\": {\n        \"provider_response_code\": \"00\",\n        \"provider\": \"PaywithAccount\",\n        \"errors\": null,\n        \"error\": null,\n        \"provider_response\": {\n            \"status\": \"ACTIVE\",\n            \"created_on\": \"2020-04-05 23:08:01\",\n            \"meta\": {}\n        },\n        \"client_info\": {\n            \"name\": null,\n            \"id\": null,\n            \"bank_cbn_code\": null,\n            \"bank_name\": null,\n            \"console_url\": null,\n            \"js_background_image\": null,\n            \"css_url\": null,\n            \"logo_url\": null,\n            \"footer_text\": null,\n            \"show_options_icon\": false,\n            \"paginate\": false,\n            \"paginate_count\": 0,\n            \"options\": null,\n            \"merchant\": null,\n            \"colors\": null,\n            \"meta\": null\n        }\n    }\n}"
+										}
+									]
+								},
+								{
+									"name": "Change PIN [R] - No Auth Token",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "18a9ecde-e79f-4b75-a811-c8fc9d492dfd",
+												"exec": [
+													"const jsonData = pm.response.json();\r",
+													"\r",
+													"pm.test('Has status field', function(){ \r",
+													"    pm.expect(jsonData).to.have.property('status'); \r",
+													"});\r",
+													"\r",
+													"pm.test('Has message field', function(){ \r",
+													"    pm.expect(jsonData).to.have.property('message');\r",
+													"    pm.expect(jsonData.message).to.include(\"Invalid Header details\");\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"id": "a79af97e-dddd-4f56-a3b2-a1cd46992ab5",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{wrong_token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"action\" : \"settings.change-pin\",\n    \"data\": {\n        \"customer_ref\":\"{{customer_ref}}\", // 234 Format\n        \"current_pin\": \"{{pin}}\",\n        \"new_pin\": \"1324\",\n        \"new_pin_confirmation\": \"1324\"\n    }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}",
+										"description": "List of data to Cach offlne\n\n1. Accounts\n    \n    1. All accounts and their last balance\n        \n2. Loan Limits\n    \n3. Membership status\n    \n4. Onboard Approval Status"
+									},
+									"response": [
+										{
+											"id": "b2266891-4337-46d7-8da5-ea3a4b2a0c6e",
 											"name": "Change Pin",
 											"originalRequest": {
 												"method": "POST",
