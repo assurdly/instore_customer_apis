@@ -5366,7 +5366,7 @@
 											]
 										},
 										{
-											"name": "Verify OTP [R] - Success Copy",
+											"name": "Verify OTP [R] - Empty Customer Ref",
 											"event": [
 												{
 													"listen": "test",
