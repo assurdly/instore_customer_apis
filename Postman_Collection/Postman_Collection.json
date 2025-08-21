@@ -4106,7 +4106,107 @@
 							"name": "Reset PIN",
 							"item": [
 								{
-									"name": "Set New Pin - Success",
+									"name": "Set New Pin",
+									"item": [
+										{
+											"name": "Set New Pin - Success",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "0c59aeb6-a9fd-450a-9373-4ea7900fc899",
+														"exec": [
+															"const jsonData = pm.response.json();\r",
+															"\r",
+															"pm.test('Has status field', function(){ \r",
+															"    pm.expect(jsonData).to.have.property('status'); \r",
+															"});\r",
+															"\r",
+															"pm.test('Has message field', function(){ \r",
+															"    pm.expect(jsonData).to.have.property('message');\r",
+															"    pm.expect(jsonData.message).to.include(\"successful\");\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"id": "718bc4dd-5ff6-4718-8e57-d3bf84881093",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json",
+														"type": "text"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer {{Token}}",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"action\": \"auth.create-pin\",\n    \"data\": {\n        \"customer_ref\": \"{{customer_ref}}\", // 234 Format\n        \"biller_code\": \"biller_code\",\n        \"pin\": \"{{pin}}\",\n        \"pin_confirmation\": \"{{pin}}\"\n    }\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{base_url}}"
+											},
+											"response": [
+												{
+													"id": "f270fda5-02ee-43b6-ae4e-f3e986fb78b3",
+													"name": "Set New Pin Pin [R]",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"action\": \"auth.login-pin\",\n    \"data\": {\n        \"customer_ref\": \"1234567890123\", // 234 Format\n        \"pin\": \"12345\",\n        \"pin_confirmation\": \"12345\"\n    }\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{url}}/auth/create-pin"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json",
+															"description": "",
+															"type": "text"
+														}
+													],
+													"cookie": [
+														{
+															"expires": "Invalid Date",
+															"domain": "",
+															"path": ""
+														}
+													],
+													"responseTime": null,
+													"body": "{\n    \"status\": \"Successful\",\n    \"message\": \"Transaction processed successfully\",\n    \"data\": {\n        \"provider_response_code\": \"00\",\n        \"provider\": \"PaywithAccount\",\n        \"errors\": null,\n        \"error\": null,\n        \"provider_response\": {\n            \"status\": \"ACTIVE\",\n            \"created_on\": \"2020-04-05 23:08:01\",\n            \"meta\": {}\n        },\n        \"client_info\": {\n            \"name\": null,\n            \"id\": null,\n            \"bank_cbn_code\": null,\n            \"bank_name\": null,\n            \"console_url\": null,\n            \"js_background_image\": null,\n            \"css_url\": null,\n            \"logo_url\": null,\n            \"footer_text\": null,\n            \"show_options_icon\": false,\n            \"paginate\": false,\n            \"paginate_count\": 0,\n            \"options\": null,\n            \"merchant\": null,\n            \"colors\": null,\n            \"meta\": null\n        }\n    }\n}"
+												}
+											]
+										}
+									],
+									"id": "78a5883b-c7f7-4109-aade-de4750782f47"
+								},
+								{
+									"name": "Set New Pin - Success Copy",
 									"event": [
 										{
 											"listen": "test",
@@ -4129,7 +4229,7 @@
 											}
 										}
 									],
-									"id": "718bc4dd-5ff6-4718-8e57-d3bf84881093",
+									"id": "21bfbc3c-2995-4f76-91db-4fd20e4d4134",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -4160,7 +4260,7 @@
 									},
 									"response": [
 										{
-											"id": "f270fda5-02ee-43b6-ae4e-f3e986fb78b3",
+											"id": "47c350ac-5754-47e9-a099-01f85e5bc65b",
 											"name": "Set New Pin Pin [R]",
 											"originalRequest": {
 												"method": "POST",
