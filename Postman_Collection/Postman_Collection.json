@@ -5372,21 +5372,104 @@
 											},
 											"request": {
 												"method": "POST",
-												"header": [],
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json",
+														"type": "text"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer {{Token}}",
+														"type": "text"
+													}
+												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n    \"action\": \"auth.create-password\",\n    \"data\": {\n        \"customer_ref\": \"1234567890123\", // 234 Format\n        \"biller_code\": \"biller_code\",\n        \"password\": \"password here\",\n        \"password_confirmation\": \"password here\"\n    }\n}",
+													"raw": "{\n    \"action\": \"auth.create-password\",\n    \"data\": {\n        \"customer_ref\": \"{{customer_ref}}\", // 234 Format\n        \"biller_code\": \"{{biller_code}}\",\n        \"password\": \"{{password}}\",\n        \"password_confirmation\": \"{{password}}\"\n    }\n}",
 													"options": {
 														"raw": {
 															"language": "json"
 														}
 													}
 												},
-												"url": "{{url}}/auth/create-password"
+												"url": "{{base_url}}"
 											},
 											"response": [
 												{
 													"id": "f884c2a1-f486-4d5f-bec9-1eaad468f8ef",
+													"name": "Set new  Password [R]",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"action\": \"auth.create-password\",\n    \"data\": {\n        \"customer_ref\": \"1234567890123\", // 234 Format\n        \"biller_code\": \"biller_code\",\n        \"password\": \"password here\",\n        \"password_confirmation\": \"password here\"\n    }\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{url}}/auth/create-password"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json",
+															"description": "",
+															"type": "text"
+														}
+													],
+													"cookie": [
+														{
+															"expires": "Invalid Date",
+															"domain": "",
+															"path": ""
+														}
+													],
+													"responseTime": null,
+													"body": "{\n    \"status\": \"Successful\",\n    \"message\": \"Transaction processed successfully\",\n    \"data\": {\n        \"provider_response_code\": \"00\",\n        \"provider\": \"PaywithAccount\",\n        \"errors\": null,\n        \"error\": null,\n        \"provider_response\": {\n            \"status\": \"ACTIVE\",\n            \"created_on\": \"2020-04-05 23:08:01\",\n            \"meta\": {}\n        },\n        \"client_info\": {\n            \"name\": null,\n            \"id\": null,\n            \"bank_cbn_code\": null,\n            \"bank_name\": null,\n            \"console_url\": null,\n            \"js_background_image\": null,\n            \"css_url\": null,\n            \"logo_url\": null,\n            \"footer_text\": null,\n            \"show_options_icon\": false,\n            \"paginate\": false,\n            \"paginate_count\": 0,\n            \"options\": null,\n            \"merchant\": null,\n            \"colors\": null,\n            \"meta\": null\n        }\n    }\n}"
+												}
+											]
+										},
+										{
+											"name": "Set new  Password [R] - Success Copy",
+											"id": "9cc91858-594c-4f22-944e-d4c4a141335b",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json",
+														"type": "text"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer {{Token}}",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"action\": \"auth.create-password\",\n    \"data\": {\n        \"customer_ref\": \"{{customer_ref}}\", // 234 Format\n        \"biller_code\": \"{{biller_code}}\",\n        \"password\": \"{{password}}\",\n        \"password_confirmation\": \"{{password}}\"\n    }\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{base_url}}"
+											},
+											"response": [
+												{
+													"id": "c9e12cf5-4814-4619-ba03-dd252dbcbe46",
 													"name": "Set new  Password [R]",
 													"originalRequest": {
 														"method": "POST",
