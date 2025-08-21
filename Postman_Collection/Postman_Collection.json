@@ -9675,7 +9675,7 @@
 			"name": "Dashboard",
 			"item": [
 				{
-					"name": "Transactions [R] Copy",
+					"name": "Transactions [R]",
 					"id": "63b0da5a-d344-411b-ac88-0f0ef0a51169",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
