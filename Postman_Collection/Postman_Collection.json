@@ -5847,7 +5847,7 @@
 											]
 										},
 										{
-											"name": "Verify OTP [R] - Invalid Token Copy",
+											"name": "Verify OTP [R - No Auth Token",
 											"event": [
 												{
 													"listen": "test",
@@ -5887,8 +5887,9 @@
 													},
 													{
 														"key": "Authorization",
-														"value": "Bearer {{wrong_token}}",
-														"type": "text"
+														"value": "Bearer {{Token}}",
+														"type": "text",
+														"disabled": true
 													}
 												],
 												"body": {
