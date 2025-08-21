@@ -7078,23 +7078,56 @@
 							"item": [
 								{
 									"name": "Change Pin [R] - Success",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "18a9ecde-e79f-4b75-a811-c8fc9d492dfd",
+												"exec": [
+													"const jsonData = pm.response.json();\r",
+													"\r",
+													"pm.test('Has status field', function(){ \r",
+													"    pm.expect(jsonData).to.have.property('status'); \r",
+													"});\r",
+													"\r",
+													"pm.test('Has message field', function(){ \r",
+													"    pm.expect(jsonData).to.have.property('message');\r",
+													"    pm.expect(jsonData.message).to.include(\"Transaction processed successfully\");\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
 									"id": "566cb46e-e89a-45e5-a8ea-b1aa853cfac1",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
 									"request": {
 										"method": "POST",
-										"header": [],
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{Token}}",
+												"type": "text"
+											}
+										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"action\" : \"settings.change-pin\",\n    \"data\": {\n        \"customer_ref\":\"1234567890123\", // 234 Format\n        \"current_pin\": \"1234\",\n        \"new_pin\": \"1324\",\n        \"new_pin_confirmation\": \"1324\"\n    }\n}",
+											"raw": "{\n    \"action\" : \"settings.change-pin\",\n    \"data\": {\n        \"customer_ref\":\"{{customer_ref}}\", // 234 Format\n        \"current_pin\": \"{{pin}}\",\n        \"new_pin\": \"1324\",\n        \"new_pin_confirmation\": \"1324\"\n    }\n}",
 											"options": {
 												"raw": {
 													"language": "json"
 												}
 											}
 										},
-										"url": "{{url}}/settings/change-pin",
+										"url": "{{base_url}}",
 										"description": "List of data to Cach offlne\n\n1. Accounts\n    \n    1. All accounts and their last balance\n        \n2. Loan Limits\n    \n3. Membership status\n    \n4. Onboard Approval Status"
 									},
 									"response": [
@@ -7139,29 +7172,62 @@
 									]
 								},
 								{
-									"name": "Change Pin [R] - Success Copy",
-									"id": "459aeeaf-9180-4504-bdf7-44afc8889a33",
+									"name": "Change Pin [R] - Empty Customer Ref.",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "18a9ecde-e79f-4b75-a811-c8fc9d492dfd",
+												"exec": [
+													"const jsonData = pm.response.json();\r",
+													"\r",
+													"pm.test('Has status field', function(){ \r",
+													"    pm.expect(jsonData).to.have.property('status'); \r",
+													"});\r",
+													"\r",
+													"pm.test('Has message field', function(){ \r",
+													"    pm.expect(jsonData).to.have.property('message');\r",
+													"    pm.expect(jsonData.message).to.include(\"Transaction processed successfully\");\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"id": "2969ae69-bfa1-4758-aeb6-d396c46c8eea",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
 									"request": {
 										"method": "POST",
-										"header": [],
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{Token}}",
+												"type": "text"
+											}
+										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"action\" : \"settings.change-pin\",\n    \"data\": {\n        \"customer_ref\":\"1234567890123\", // 234 Format\n        \"current_pin\": \"1234\",\n        \"new_pin\": \"1324\",\n        \"new_pin_confirmation\": \"1324\"\n    }\n}",
+											"raw": "{\n    \"action\" : \"settings.change-pin\",\n    \"data\": {\n        \"customer_ref\":\"\", // 234 Format\n        \"current_pin\": \"{{pin}}\",\n        \"new_pin\": \"1324\",\n        \"new_pin_confirmation\": \"1324\"\n    }\n}",
 											"options": {
 												"raw": {
 													"language": "json"
 												}
 											}
 										},
-										"url": "{{url}}/settings/change-pin",
+										"url": "{{base_url}}",
 										"description": "List of data to Cach offlne\n\n1. Accounts\n    \n    1. All accounts and their last balance\n        \n2. Loan Limits\n    \n3. Membership status\n    \n4. Onboard Approval Status"
 									},
 									"response": [
 										{
-											"id": "146b648d-c408-4eee-84e3-bef0f252978f",
+											"id": "432afe8a-6c13-4bee-830f-2bc7a6ab054e",
 											"name": "Change Pin",
 											"originalRequest": {
 												"method": "POST",
