@@ -5654,7 +5654,7 @@
 											]
 										},
 										{
-											"name": "Verify OTP [R] - Empty OTP Copy",
+											"name": "Verify OTP [R] - Empty Biller Code",
 											"event": [
 												{
 													"listen": "test",
