@@ -11160,9 +11160,8 @@
 			"value": ""
 		},
 		{
-			"key": "wrong_token",
-			"value": "6ec10a2f18cf9f894c49462b7c24a3d2",
-			"type": "default"
+			"key": "current_subscription_id",
+			"value": ""
 		}
 	]
 }
