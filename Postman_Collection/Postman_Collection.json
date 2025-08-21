@@ -7267,7 +7267,7 @@
 									]
 								},
 								{
-									"name": "Change PIN [R] - Wrong PIN",
+									"name": "Change PIN [R] - Wrong Current PIN",
 									"event": [
 										{
 											"listen": "test",
@@ -7362,7 +7362,7 @@
 									]
 								},
 								{
-									"name": "Change PIN [R] - Wrong PIN Copy",
+									"name": "Change PIN [R] - Empty PIN",
 									"event": [
 										{
 											"listen": "test",
