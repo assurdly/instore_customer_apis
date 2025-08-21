@@ -9675,35 +9675,20 @@
 			"name": "Dashboard",
 			"item": [
 				{
-					"name": "Transactions [R]",
-					"id": "63b0da5a-d344-411b-ac88-0f0ef0a51169",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"action\": \"dashboard.transactions\",\n    \"data\": {\n        \"customer_ref\": \"1234567890\",\n        \"biller_code\": \"biller_code\",\n\n        // Optionals\n        \"start_date\": \"start_date\",\n        \"end_date\": \"end_date\",\n        \"status\": \"status\",\n        \"min_amount\": \"min_amount\",\n        \"max_amount\": \"max_amount\",\n        \"narration\": \"narration\"\n    }\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{url}}/d/transaction"
-					},
-					"response": [
+					"name": "Transactions",
+					"item": [
 						{
-							"id": "970fb2f7-3e52-492b-a732-53645a1a4d53",
-							"name": "Transactions",
-							"originalRequest": {
+							"name": "Transactions [R]",
+							"id": "63b0da5a-d344-411b-ac88-0f0ef0a51169",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"action\": \"dashboard.transactions\",\n    \"data\": {\n        \"customer_ref\": \"1234567890\",\n        \"biller_code\": \"biller_code\"\n    }\n}",
+									"raw": "{\n    \"action\": \"dashboard.transactions\",\n    \"data\": {\n        \"customer_ref\": \"1234567890\",\n        \"biller_code\": \"biller_code\",\n\n        // Optionals\n        \"start_date\": \"start_date\",\n        \"end_date\": \"end_date\",\n        \"status\": \"status\",\n        \"min_amount\": \"min_amount\",\n        \"max_amount\": \"max_amount\",\n        \"narration\": \"narration\"\n    }\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -9712,153 +9697,192 @@
 								},
 								"url": "{{url}}/d/transaction"
 							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
+							"response": [
 								{
-									"key": "Content-Type",
-									"value": "application/json",
-									"description": "",
-									"type": "text"
-								}
-							],
-							"cookie": [
-								{
-									"expires": "Invalid Date",
-									"domain": "",
-									"path": ""
-								}
-							],
-							"responseTime": null,
-							"body": "{\n    \"status\": \"Successful\",\n    \"message\": \"Transaction processed successfully\",\n    \"data\": {\n        \"provider_response_code\": \"00\",\n        \"provider\": \"PaywithAccount\",\n        \"errors\": null,\n        \"error\": null,\n        \"provider_response\": {\n            \"account_number\": \"1790303747\",\n            \"closing_balance\": 0,\n            \"opening_balance\": 0,\n            \"statement_list\": [\n                {\n                    \"transaction_reference\": \"788FTIB20045GJU\",\n                    \"transaction_amount\": 850,\n                    \"balance\": null,\n                    \"transaction_status\": \"successful\",\n                    \"transaction_type\": \"transfer\",\n                    \"transaction_date\": \"2020-02-14 00:00:00\",\n                    \"description\": \"MOB.BNKG:011/MUSA TOLULOPE/TRANSFER 30000 FROM 1780***243 TO 1077***364:000008200214190749669842598346\",\n                    \"from\": {\n                        \"account_name\": \"MUSA TOLULOPE\",\n                        \"account_number\": \"2100000000\",\n                        \"bank_name\": \"Zenith Bank\"\n                    },\n                    \"to\": {\n                        \"account_name\": \"Subscription Manager - PWA\",\n                        \"bank_name\": \"Fidelity Bank\"\n                    },\n                    \"meta\": {\n                        \"promo_url\":\"https://www.paywithaccount/com/win?ref=788FTIB20045GJU\",\n                        \"merchant\": \"Subscription Manager\",\n                        \"currency_symbol\": \"N\"\n                    }\n                },\n                {\n                    \"transaction_reference\": \"382FTTP20045000J\",\n                    \"transaction_amount\": 1000,\n                    \"balance\": null,\n                    \"transaction_status\": \"successful\",\n                    \"from\": {\n                        \"account_name\": \"CHIJIOKE JULIET JOHN\",\n                        \"bank_name\": \"Zenith Bank\"\n                    },\n                    \"to\": {\n                        \"account_number\": \"2100000000\",\n                        \"account_name\": \"Subscription Manager2 - PWA\",\n                        \"bank_name\": \"Fidelity Bank\"\n                    },\n                    \"transaction_type\": \"transfer\",\n                    \"transaction_date\": \"2020-02-14 00:00:00\",\n                    \"description\": \"MB: trans: Trf from CHIJIOKE JULIET JOHN to JOHN DOE JANE\",\n                     \"meta\": {\n                        \"promo_url\":\"https://www.paywithaccount/com/win?ref=382FTTP20045000J\",\n                        \"merchant\": \"Subscription Manager2\",\n                        \"currency_symbol\": \"N\"\n                    }\n                },\n                {\n                    \"transaction_reference\": \"136n15a200450084\",\n                    \"transaction_amount\": 400,\n                    \"balance\": 3756672,\n                    \"transaction_status\": \"successful\",\n                    \"from\": {\n                        \"account_number\":\"2100000000\",\n                        \"account_name\": \"MUSA TOLULOPE\",\n                        \"bank_name\": \"Zenith Bank\"\n                    },\n                    \"to\": null,\n                    \"transaction_type\": \"debit\",\n                    \"transaction_date\": \"2020-02-14 00:00:00\",\n                    \"description\": \"SMS SERVICE UNCHARGED APPLIED JAN 2020-1780161243\",\n                    \"meta\": {\n                        \"promo_url\":\"https://www.paywithaccount/com/win?ref=136n15a200450084\",\n                        \"merchant\": \"Subscription Manager\",\n                        \"currency_symbol\": \"N\"\n                    }\n                }\n            ],\n            \"reference\": \"000022200225154318222333334432\",\n            \"meta\":{\n                \"pagination\": {\n                    \"records\": 3,\n                    \"page\": 1,\n                    \"pages\": 1,\n                    \"page_size\": 10\n                }\n            }\n        }\n    }\n}"
-						},
-						{
-							"id": "f2a64962-763a-4f14-a257-0037f8e6a2ab",
-							"name": "Transactions old",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"action\": \"dashboard.transactions\",\n    \"data\": {\n        \"customer_ref\": \"1234567890\",\n        \"biller_code\": \"biller_code\"\n    }\n}",
-									"options": {
-										"raw": {
-											"language": "json"
+									"id": "970fb2f7-3e52-492b-a732-53645a1a4d53",
+									"name": "Transactions",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"action\": \"dashboard.transactions\",\n    \"data\": {\n        \"customer_ref\": \"1234567890\",\n        \"biller_code\": \"biller_code\"\n    }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{url}}/d/transaction"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"description": "",
+											"type": "text"
 										}
-									}
+									],
+									"cookie": [
+										{
+											"expires": "Invalid Date",
+											"domain": "",
+											"path": ""
+										}
+									],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"Successful\",\n    \"message\": \"Transaction processed successfully\",\n    \"data\": {\n        \"provider_response_code\": \"00\",\n        \"provider\": \"PaywithAccount\",\n        \"errors\": null,\n        \"error\": null,\n        \"provider_response\": {\n            \"account_number\": \"1790303747\",\n            \"closing_balance\": 0,\n            \"opening_balance\": 0,\n            \"statement_list\": [\n                {\n                    \"transaction_reference\": \"788FTIB20045GJU\",\n                    \"transaction_amount\": 850,\n                    \"balance\": null,\n                    \"transaction_status\": \"successful\",\n                    \"transaction_type\": \"transfer\",\n                    \"transaction_date\": \"2020-02-14 00:00:00\",\n                    \"description\": \"MOB.BNKG:011/MUSA TOLULOPE/TRANSFER 30000 FROM 1780***243 TO 1077***364:000008200214190749669842598346\",\n                    \"from\": {\n                        \"account_name\": \"MUSA TOLULOPE\",\n                        \"account_number\": \"2100000000\",\n                        \"bank_name\": \"Zenith Bank\"\n                    },\n                    \"to\": {\n                        \"account_name\": \"Subscription Manager - PWA\",\n                        \"bank_name\": \"Fidelity Bank\"\n                    },\n                    \"meta\": {\n                        \"promo_url\":\"https://www.paywithaccount/com/win?ref=788FTIB20045GJU\",\n                        \"merchant\": \"Subscription Manager\",\n                        \"currency_symbol\": \"N\"\n                    }\n                },\n                {\n                    \"transaction_reference\": \"382FTTP20045000J\",\n                    \"transaction_amount\": 1000,\n                    \"balance\": null,\n                    \"transaction_status\": \"successful\",\n                    \"from\": {\n                        \"account_name\": \"CHIJIOKE JULIET JOHN\",\n                        \"bank_name\": \"Zenith Bank\"\n                    },\n                    \"to\": {\n                        \"account_number\": \"2100000000\",\n                        \"account_name\": \"Subscription Manager2 - PWA\",\n                        \"bank_name\": \"Fidelity Bank\"\n                    },\n                    \"transaction_type\": \"transfer\",\n                    \"transaction_date\": \"2020-02-14 00:00:00\",\n                    \"description\": \"MB: trans: Trf from CHIJIOKE JULIET JOHN to JOHN DOE JANE\",\n                     \"meta\": {\n                        \"promo_url\":\"https://www.paywithaccount/com/win?ref=382FTTP20045000J\",\n                        \"merchant\": \"Subscription Manager2\",\n                        \"currency_symbol\": \"N\"\n                    }\n                },\n                {\n                    \"transaction_reference\": \"136n15a200450084\",\n                    \"transaction_amount\": 400,\n                    \"balance\": 3756672,\n                    \"transaction_status\": \"successful\",\n                    \"from\": {\n                        \"account_number\":\"2100000000\",\n                        \"account_name\": \"MUSA TOLULOPE\",\n                        \"bank_name\": \"Zenith Bank\"\n                    },\n                    \"to\": null,\n                    \"transaction_type\": \"debit\",\n                    \"transaction_date\": \"2020-02-14 00:00:00\",\n                    \"description\": \"SMS SERVICE UNCHARGED APPLIED JAN 2020-1780161243\",\n                    \"meta\": {\n                        \"promo_url\":\"https://www.paywithaccount/com/win?ref=136n15a200450084\",\n                        \"merchant\": \"Subscription Manager\",\n                        \"currency_symbol\": \"N\"\n                    }\n                }\n            ],\n            \"reference\": \"000022200225154318222333334432\",\n            \"meta\":{\n                \"pagination\": {\n                    \"records\": 3,\n                    \"page\": 1,\n                    \"pages\": 1,\n                    \"page_size\": 10\n                }\n            }\n        }\n    }\n}"
 								},
-								"url": "{{url}}/d/transaction"
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
 								{
-									"key": "Content-Type",
-									"value": "application/json",
-									"description": "",
-									"type": "text"
+									"id": "f2a64962-763a-4f14-a257-0037f8e6a2ab",
+									"name": "Transactions old",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"action\": \"dashboard.transactions\",\n    \"data\": {\n        \"customer_ref\": \"1234567890\",\n        \"biller_code\": \"biller_code\"\n    }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{url}}/d/transaction"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [
+										{
+											"expires": "Invalid Date",
+											"domain": "",
+											"path": ""
+										}
+									],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"Successful\",\n    \"message\": \"Transaction processed successfully\",\n    \"data\": {\n        \"provider_response_code\": \"00\",\n        \"provider\": \"PaywithAccount\",\n        \"errors\": null,\n        \"error\": null,\n        \"provider_response\": {\n            \"account_number\": \"1790303747\",\n            \"closing_balance\": 0,\n            \"opening_balance\": 0,\n            \"statement_list\": [\n                {\n                    \"transaction_reference\": \"788FTIB20045GJU\",\n                    \"transaction_amount\": 3000563,\n                    \"balance\": 1056109,\n                    \"transaction_type\": \"D\",\n                    \"transaction_date\": \"2020-02-14T00:00:00\",\n                    \"description\": \"MOB.BNKG:011/MUSA TOLULOPE/TRANSFER 30000 FROM 1780***243 TO 1077***364:000008200214190749669842598346\",\n                    \"meta\": {\n                        \"promo_url\": \"https://www.paywithaccount/com/win?ref=0094885757575\",\n                        \"merchant\": \"Subscription Manager\"\n                    }\n                },\n                {\n                    \"transaction_reference\": \"382FTTP20045000J\",\n                    \"transaction_amount\": 3000,\n                    \"balance\": 4056672,\n                    \"transaction_type\": \"C\",\n                    \"transaction_date\": \"2020-02-14T00:00:00\",\n                    \"description\": \"MB: trans: Trf from CHIJIOKE JULIET JOHN to JOHN DOE JANE\",\n                    \"meta\": {\n                        \"promo_url\": \"https://www.paywithaccount/com/win?ref=0094885757575\",\n                        \"merchant\": \"Subscription Manager2\"\n                    }\n                },\n                {\n                    \"transaction_reference\": \"136n15a200450084\",\n                    \"transaction_amount\": 400,\n                    \"balance\": 3756672,\n                    \"transaction_type\": \"D\",\n                    \"transaction_date\": \"2020-02-14T00:00:00\",\n                    \"description\": \"SMS SERVICE UNCHARGED APPLIED JAN 2020-1780161243\",\n                    \"meta\": {\n                        \"promo_url\": \"https://www.paywithaccount/com/win?ref=0094885757575\",\n                        \"merchant\": \"Subscription Manager\"\n                    }\n                }\n            ],\n            \"reference\": \"000022200225154318222333334432\",\n            \"meta\": {}\n        }\n    }\n}"
 								}
-							],
-							"cookie": [
-								{
-									"expires": "Invalid Date",
-									"domain": "",
-									"path": ""
-								}
-							],
-							"responseTime": null,
-							"body": "{\n    \"status\": \"Successful\",\n    \"message\": \"Transaction processed successfully\",\n    \"data\": {\n        \"provider_response_code\": \"00\",\n        \"provider\": \"PaywithAccount\",\n        \"errors\": null,\n        \"error\": null,\n        \"provider_response\": {\n            \"account_number\": \"1790303747\",\n            \"closing_balance\": 0,\n            \"opening_balance\": 0,\n            \"statement_list\": [\n                {\n                    \"transaction_reference\": \"788FTIB20045GJU\",\n                    \"transaction_amount\": 3000563,\n                    \"balance\": 1056109,\n                    \"transaction_type\": \"D\",\n                    \"transaction_date\": \"2020-02-14T00:00:00\",\n                    \"description\": \"MOB.BNKG:011/MUSA TOLULOPE/TRANSFER 30000 FROM 1780***243 TO 1077***364:000008200214190749669842598346\",\n                    \"meta\": {\n                        \"promo_url\": \"https://www.paywithaccount/com/win?ref=0094885757575\",\n                        \"merchant\": \"Subscription Manager\"\n                    }\n                },\n                {\n                    \"transaction_reference\": \"382FTTP20045000J\",\n                    \"transaction_amount\": 3000,\n                    \"balance\": 4056672,\n                    \"transaction_type\": \"C\",\n                    \"transaction_date\": \"2020-02-14T00:00:00\",\n                    \"description\": \"MB: trans: Trf from CHIJIOKE JULIET JOHN to JOHN DOE JANE\",\n                    \"meta\": {\n                        \"promo_url\": \"https://www.paywithaccount/com/win?ref=0094885757575\",\n                        \"merchant\": \"Subscription Manager2\"\n                    }\n                },\n                {\n                    \"transaction_reference\": \"136n15a200450084\",\n                    \"transaction_amount\": 400,\n                    \"balance\": 3756672,\n                    \"transaction_type\": \"D\",\n                    \"transaction_date\": \"2020-02-14T00:00:00\",\n                    \"description\": \"SMS SERVICE UNCHARGED APPLIED JAN 2020-1780161243\",\n                    \"meta\": {\n                        \"promo_url\": \"https://www.paywithaccount/com/win?ref=0094885757575\",\n                        \"merchant\": \"Subscription Manager\"\n                    }\n                }\n            ],\n            \"reference\": \"000022200225154318222333334432\",\n            \"meta\": {}\n        }\n    }\n}"
+							]
 						}
-					]
+					],
+					"id": "42db2c17-7cc7-4dff-a504-8ff04915ef78"
 				},
 				{
-					"name": "Customers [R] Copy",
-					"id": "49a44dfb-7eb1-443e-bd92-b4629eeb62f2",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"action\": \"dashboard.customer\",\n    \"data\": {\n        \"customer_ref\": \"1234567890\",\n        \"biller_code\": \"biller_code\",\n\n        // Optionals\n        \"start_date\": \"start_date\",\n        \"end_date\": \"end_date\",\n        \"status\": \"status\",\n        \"min_amount\": \"min_amount\",\n        \"max_amount\": \"max_amount\",\n        \"narration\": \"narration\"\n    }\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{url}}/d/customers"
-					},
-					"response": [
+					"name": "New Folder",
+					"item": [
 						{
-							"id": "24626606-9ec3-487c-a3d0-7f16fbc54c8c",
-							"name": "Customers",
-							"originalRequest": {
+							"name": "Customers [R]",
+							"id": "49a44dfb-7eb1-443e-bd92-b4629eeb62f2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
 								"method": "POST",
 								"header": [
 									{
-										"key": "Content-Type",
-										"value": "application/json",
+										"key": "Authorization",
+										"value": "Bearer {{Token}}",
 										"type": "text"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"action\": \"dashboard.customer\",\n    \"data\": {\n        \"customer_ref\": \"1234567890\",\n        \"biller_code\": \"biller_code\",\n\n        // Optionals\n        \"start_date\": \"start_date\",\n        \"end_date\": \"end_date\",\n        \"status\": \"status\",\n        \"min_amount\": \"min_amount\",\n        \"max_amount\": \"max_amount\",\n        \"narration\": \"narration\"\n    }\n}",
+									"raw": "{\n    \"action\": \"dashboard.customers\",\n    \"data\": {\n        \"customer_ref\": \"+2347080507367\",\n        \"biller_code\": \"06\"\n\n        // Optionals\n       // \"start_date\": \"start_date\",\n       // \"end_date\": \"end_date\",\n      //  \"status\": \"status\",\n      //  \"min_amount\": \"min_amount\",\n      //  \"max_amount\": \"max_amount\",\n      //  \"narration\": \"narration\"\n    }\n}",
 									"options": {
 										"raw": {
 											"language": "json"
 										}
 									}
 								},
-								"url": "{{url}}/d/customers"
+								"url": "{{base_url}}"
 							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
+							"response": [
 								{
-									"key": "Content-Type",
-									"value": "application/json",
-									"description": "",
-									"type": "text"
+									"id": "24626606-9ec3-487c-a3d0-7f16fbc54c8c",
+									"name": "Customers",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"action\": \"dashboard.customer\",\n    \"data\": {\n        \"customer_ref\": \"1234567890\",\n        \"biller_code\": \"biller_code\",\n\n        // Optionals\n        \"start_date\": \"start_date\",\n        \"end_date\": \"end_date\",\n        \"status\": \"status\",\n        \"min_amount\": \"min_amount\",\n        \"max_amount\": \"max_amount\",\n        \"narration\": \"narration\"\n    }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{url}}/d/customers"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [
+										{
+											"expires": "Invalid Date",
+											"domain": "",
+											"path": ""
+										}
+									],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"Successful\",\n    \"message\": \"Transaction processed successfully\",\n    \"data\": {\n        \"provider_response_code\": \"00\",\n        \"provider\": \"PaywithAccount\",\n        \"errors\": null,\n        \"error\": null,\n        \"provider_response\": {\n            \"status\": \"ACTIVE\",\n            \"created_on\": \"2020-04-05 23:08:01\",\n            \"biller_name\": \"Koko Below Stores\",\n            \"biller_code\": \"000019\",\n            \"tax_id\": \"\",\n            \"bank_code\": \"\",\n            \"bank_account_number\": \"\",\n            \"address\": \"\",\n            \"notification_phone_number\": \"\", //csv\n            \"notification_email\": \"\",\n            \"webhook_url\": \"\",\n            \"virtual_account_expiration\": \"\",\n            \"whatsapp_contact_number\": \"\",\n            \"whatsapp_contact_name\": \"\",\n            \"ussd_description\": \"\",\n            \"business_short_name\": \"\",\n            \"ussd_success_response_message\": \"\",\n            \"ussd_failure_response_message\": \"\",\n            \"ussd_failure_sms\": \"\",\n            \"ussd_success_sms\": \"\",\n            \"ussd_custom_fields\": \"age,bvn\", //csv\n            \"meta\": {\n                \"customers\": [\n                    {\n                        \"name\": \"Akin Olunloye\",\n                        \"phone_number\": \"09066870818\",\n                        \"email\": \"akin@onepipe.io\",\n                        \"address\": \"11b Badagry Street\",\n                        \"status\": \"ACTIVE\"\n                    }\n                ],\n                \"pagination\": {\n                    \"records\": 4,\n                    \"page\": 1,\n                    \"pages\": 1,\n                    \"page_size\": 1000000000\n                }\n            }\n        },\n        \"client_info\": {\n            \"name\": null,\n            \"id\": null,\n            \"bank_cbn_code\": null,\n            \"bank_name\": null,\n            \"console_url\": null,\n            \"js_background_image\": null,\n            \"css_url\": null,\n            \"logo_url\": null,\n            \"footer_text\": null,\n            \"show_options_icon\": false,\n            \"paginate\": false,\n            \"paginate_count\": 0,\n            \"options\": null,\n            \"merchant\": null,\n            \"colors\": null,\n            \"meta\": null\n        }\n    }\n}"
 								}
-							],
-							"cookie": [
-								{
-									"expires": "Invalid Date",
-									"domain": "",
-									"path": ""
-								}
-							],
-							"responseTime": null,
-							"body": "{\n    \"status\": \"Successful\",\n    \"message\": \"Transaction processed successfully\",\n    \"data\": {\n        \"provider_response_code\": \"00\",\n        \"provider\": \"PaywithAccount\",\n        \"errors\": null,\n        \"error\": null,\n        \"provider_response\": {\n            \"status\": \"ACTIVE\",\n            \"created_on\": \"2020-04-05 23:08:01\",\n            \"biller_name\": \"Koko Below Stores\",\n            \"biller_code\": \"000019\",\n            \"tax_id\": \"\",\n            \"bank_code\": \"\",\n            \"bank_account_number\": \"\",\n            \"address\": \"\",\n            \"notification_phone_number\": \"\", //csv\n            \"notification_email\": \"\",\n            \"webhook_url\": \"\",\n            \"virtual_account_expiration\": \"\",\n            \"whatsapp_contact_number\": \"\",\n            \"whatsapp_contact_name\": \"\",\n            \"ussd_description\": \"\",\n            \"business_short_name\": \"\",\n            \"ussd_success_response_message\": \"\",\n            \"ussd_failure_response_message\": \"\",\n            \"ussd_failure_sms\": \"\",\n            \"ussd_success_sms\": \"\",\n            \"ussd_custom_fields\": \"age,bvn\", //csv\n            \"meta\": {\n                \"customers\": [\n                    {\n                        \"name\": \"Akin Olunloye\",\n                        \"phone_number\": \"09066870818\",\n                        \"email\": \"akin@onepipe.io\",\n                        \"address\": \"11b Badagry Street\",\n                        \"status\": \"ACTIVE\"\n                    }\n                ],\n                \"pagination\": {\n                    \"records\": 4,\n                    \"page\": 1,\n                    \"pages\": 1,\n                    \"page_size\": 1000000000\n                }\n            }\n        },\n        \"client_info\": {\n            \"name\": null,\n            \"id\": null,\n            \"bank_cbn_code\": null,\n            \"bank_name\": null,\n            \"console_url\": null,\n            \"js_background_image\": null,\n            \"css_url\": null,\n            \"logo_url\": null,\n            \"footer_text\": null,\n            \"show_options_icon\": false,\n            \"paginate\": false,\n            \"paginate_count\": 0,\n            \"options\": null,\n            \"merchant\": null,\n            \"colors\": null,\n            \"meta\": null\n        }\n    }\n}"
+							]
 						}
-					]
+					],
+					"id": "e75efd4b-f66a-4561-8717-02f3bbdf1f93"
 				},
 				{
-					"name": "Get Customer Data [R] Copy",
+					"name": "Get Customer Data [R]",
 					"id": "7d331772-01aa-4ffd-9e52-bbe2dbfa5ed9",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Token}}",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"action\" : \"misc.get-customer\",\n    \"data\": {\n        \"customer_ref\":\"1234567890123\" // 234 Format\n    }\n}",
+							"raw": "{\n    \"action\" : \"misc.get-customer\",\n    \"data\": {\n        \"customer_ref\":\"{{customer_ref}}\" // 234 Format\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{url}}/misc/get-onboard-status",
+						"url": "{{base_url}}",
 						"description": "List of data to Cach offlne\n\n1. Accounts\n    \n    1. All accounts and their last balance\n        \n2. Loan Limits\n    \n3. Membership status\n    \n4. Onboard Approval Status"
 					},
 					"response": [
