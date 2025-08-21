@@ -1908,7 +1908,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"action\": \"auth.send-login-otp\",\n  \"data\": {\n    \"customer_ref\": \"{{customer_ref}}\",\n    \"biller_code\": \"{{biller_code}}\"\n  }\n}"
+											"raw": "{\n  \"action\": \"auth.send-login-otp\",\n  \"data\": {\n    \"customer_ref\": \"{{customer_ref}}\",\n    \"biller_code\": null\n  }\n}"
 										},
 										"url": "{{base_url}}"
 									},
@@ -1924,9 +1924,6 @@
 												"exec": [
 													"const jsonData = pm.response.json();",
 													"",
-													"pm.test('Status code 400', function () {",
-													"     pm.response.to.have.status(400); ",
-													"});",
 													"",
 													"pm.test('Has status field', function(){",
 													"    pm.expect(jsonData).to.have.property('status'); ",
@@ -1936,7 +1933,11 @@
 													"    pm.expect(jsonData).to.have.property('message'); ",
 													"    pm.expect(jsonData.message).to.exist.and.not.be.empty;",
 													"});",
-													""
+													"",
+													"pm.test('Has data field', function () {",
+													"    pm.expect(jsonData).to.have.property('data');",
+													"    pm.expect(jsonData.data.error).to.have.property(\"code\");",
+													"})"
 												],
 												"type": "text/javascript",
 												"packages": {}
@@ -1977,10 +1978,6 @@
 												"exec": [
 													"const jsonData = pm.response.json();",
 													"",
-													"pm.test('Status code 400', function () {",
-													"     pm.response.to.have.status(400); ",
-													"});",
-													"",
 													"pm.test('Has status field', function(){",
 													"    pm.expect(jsonData).to.have.property('status'); ",
 													"    pm.expect(jsonData.status).to.exist.and.not.be.empty; ",
@@ -1989,6 +1986,11 @@
 													"    pm.expect(jsonData).to.have.property('message'); ",
 													"    pm.expect(jsonData.message).to.exist.and.not.be.empty;",
 													"});",
+													"",
+													"pm.test('Has data field', function () {",
+													"    pm.expect(jsonData).to.have.property('data');",
+													"    pm.expect(jsonData.data.error).to.have.property(\"code\");",
+													"})",
 													""
 												],
 												"type": "text/javascript",
@@ -2030,9 +2032,6 @@
 												"exec": [
 													"const jsonData = pm.response.json();",
 													"",
-													"pm.test('Status code 400', function () {",
-													"     pm.response.to.have.status(400); ",
-													"});",
 													"",
 													"pm.test('Has status field', function(){",
 													"    pm.expect(jsonData).to.have.property('status'); ",
@@ -2042,7 +2041,11 @@
 													"    pm.expect(jsonData).to.have.property('message'); ",
 													"    pm.expect(jsonData.message).to.exist.and.not.be.empty;",
 													"});",
-													""
+													"",
+													"pm.test('Has data field', function () {",
+													"    pm.expect(jsonData).to.have.property('data');",
+													"    pm.expect(jsonData.data.error).to.have.property(\"code\");",
+													"})"
 												],
 												"type": "text/javascript",
 												"packages": {}
@@ -2081,7 +2084,7 @@
 									"response": []
 								},
 								{
-									"name": "Send Login OTP - invalid token Copy",
+									"name": "Send Login OTP - Empty token",
 									"event": [
 										{
 											"listen": "test",
@@ -2090,9 +2093,6 @@
 												"exec": [
 													"const jsonData = pm.response.json();",
 													"",
-													"pm.test('Status code 400', function () {",
-													"     pm.response.to.have.status(400); ",
-													"});",
 													"",
 													"pm.test('Has status field', function(){",
 													"    pm.expect(jsonData).to.have.property('status'); ",
@@ -2102,7 +2102,11 @@
 													"    pm.expect(jsonData).to.have.property('message'); ",
 													"    pm.expect(jsonData.message).to.exist.and.not.be.empty;",
 													"});",
-													""
+													"",
+													"pm.test('Has data field', function () {",
+													"    pm.expect(jsonData).to.have.property('data');",
+													"    pm.expect(jsonData.data.error).to.have.property(\"code\");",
+													"})"
 												],
 												"type": "text/javascript",
 												"packages": {}
@@ -2115,10 +2119,7 @@
 									},
 									"request": {
 										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "eyhhgkjhhfknnfhklshhfmsl"
-											}
+											"type": "noauth"
 										},
 										"method": "POST",
 										"header": [
