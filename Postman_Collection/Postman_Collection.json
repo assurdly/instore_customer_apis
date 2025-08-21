@@ -5795,7 +5795,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n    \"action\": \"auth.verify-otp\",\n    \"data\": {\n        \"customer_ref\": \"{{customer_ref}}\", // 234 Format\n        \"otp\": \"\",\n        \"otp_reference\": \"{{otp_reference}}\",\n        \"biller_code\": \"\",\n        // optional\n        \"user_agent\": \"{{use_agent}}\",\n        \"ip_address\": \"{{ip_address}}\"\n    }\n}",
+													"raw": "{\n    \"action\": \"auth.verify-otp\",\n    \"data\": {\n        \"customer_ref\": \"{{customer_ref}}\", // 234 Format\n        \"otp\": \"{{otp}}\",\n        \"otp_reference\": \"{{otp_reference}}\",\n        \"biller_code\": \"{{biller_code}}\",\n        // optional\n        \"user_agent\": \"{{use_agent}}\",\n        \"ip_address\": \"{{ip_address}}\"\n    }\n}",
 													"options": {
 														"raw": {
 															"language": "json"
