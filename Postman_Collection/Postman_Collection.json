@@ -4871,7 +4871,7 @@
 											]
 										},
 										{
-											"name": "Send OTP [R] - Success Copy",
+											"name": "Send OTP [R] - Empty Customer Reference",
 											"event": [
 												{
 													"listen": "test",
