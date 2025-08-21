@@ -2162,12 +2162,12 @@
 													"  });",
 													"",
 													"pm.test('Has status field', function(){",
-													" pm.expect(json).to.have.property('status'); ",
+													" pm.expect(jsonData).to.have.property('status'); ",
 													"});",
 													"",
 													"pm.test('Has message field', function(){",
-													" pm.expect(json).to.have.property('message');",
-													"    pm.expect(json.message).to.exist.and.not.be.empty;",
+													" pm.expect(jsonData).to.have.property('message');",
+													"    pm.expect(jsonData.message).to.exist.and.not.be.empty;",
 													"});",
 													"",
 													""
@@ -2195,7 +2195,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"action\": \"auth.verify-otp\",\n  \"data\": {\n    \"customer_ref\": \"{{customer_ref}}\",\n    \"otp\": \"{{otp}}\",\n    \"otp_reference\": \"{{otp_reference}}\",\n    \"biller_code\": \"{{biller_code}}\",\n    \"user_agent\": \"{{use_agent}}\",\n    \"ip_address\": \"{{ip_address}}\"\n  }\n}"
+											"raw": "{\n  \"action\": \"auth.verify-otp\",\n  \"data\": {\n    \"customer_ref\": \"2348012345678\",\n    \"otp\": \"{{otp}}\",\n    \"otp_reference\": \"{{otp_reference}}\",\n    \"biller_code\": \"{{biller_code}}\",\n    \"user_agent\": \"{{use_agent}}\",\n    \"ip_address\": \"{{ip_address}}\"\n  }\n}"
 										},
 										"url": "{{base_url}}"
 									},
