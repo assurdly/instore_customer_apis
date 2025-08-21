@@ -1,0 +1,7 @@
+{
+    "action": "misc.get-utility",
+    "data": {
+        "customer_ref": "",
+        "utilities": "get_countries"
+    }
+}
