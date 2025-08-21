@@ -4775,27 +4775,160 @@
 									"item": [
 										{
 											"name": "Send OTP [R] - Success",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "6f71931d-3e74-4e98-8257-6494d87d8ea8",
+														"exec": [
+															"const jsonData = pm.response.json();\r",
+															"\r",
+															"pm.test(\"Response Data is correctly returned\", function () {\r",
+															"    pm.expect(jsonData.status).to.eql(\"Successful\");\r",
+															"    pm.expect(jsonData.data.provider_response.delivery_status).to.exist;\r",
+															"    pm.expect(jsonData.data.provider_response.expires_on).to.exist;\r",
+															"    pm.expect(jsonData.data.provider_response.prompt_message).to.exist;\r",
+															"    pm.expect(jsonData.data.provider_response.reference).to.exist;\r",
+															"})\r",
+															"\r",
+															"pm.test(\"Set reference as a collection variable\", function () {\r",
+															" pm.collectionVariables.set(\"otp_reference\", jsonData.data.provider_response.reference);\r",
+															"})"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
 											"id": "676117d9-b35f-4571-ac44-9af1d4cde237",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
 											},
 											"request": {
 												"method": "POST",
-												"header": [],
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json",
+														"type": "text"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer {{Token}}",
+														"type": "text"
+													}
+												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n    \"action\": \"auth.send-login-otp\",\n    \"data\": {\n        \"customer_ref\": \"1234567890123\", // 234 Format\n        \"biller_code\": \"biller_code\" // send this when you have it\n    }\n}",
+													"raw": "{\n    \"action\": \"auth.send-login-otp\",\n    \"data\": {\n        \"customer_ref\": \"{{customer_ref}}\", // 234 Format\n        \"biller_code\": \"{{biller_code}}\" // send this when you have it\n    }\n}",
 													"options": {
 														"raw": {
 															"language": "json"
 														}
 													}
 												},
-												"url": "{{url}}/auth/login-otp"
+												"url": "{{base_url}}"
 											},
 											"response": [
 												{
 													"id": "fb788b22-9855-4176-a51d-5ef2fc79d411",
+													"name": "Send Login OTP",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"action\": \"auth.send-login-otp\",\n    \"data\": {\n        \"customer_ref\": \"1234567890123\", // 234 Format\n        \"biller_code\": \"biller_code\",\n    }\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{url}}/auth/login-otp"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json",
+															"description": "",
+															"type": "text"
+														}
+													],
+													"cookie": [
+														{
+															"expires": "Invalid Date",
+															"domain": "",
+															"path": ""
+														}
+													],
+													"responseTime": null,
+													"body": "{\n    \"status\": \"Successful\",\n    \"message\": \"Request processed successfully.\",\n    \"data\": {\n        \"provider_response_code\": \"00\",\n        \"provider\": \"PaywithAccount\",\n        \"errors\": null,\n        \"error\": null,\n        \"provider_response\": {\n            \"delivery_status\": \"logged\",\n            \"cost\": 100,\n            \"expires_on\": \"2025-03-25-12-50-16\",\n            \"ussd_code\": null,\n            \"prompt_message\": \"A message has been sent your WhatsApp ****14. Please retrieve the OTP from the message\",\n            \"reference\": \"af78ec77-2ec8-4357-b4e1-1f0e6f2fabc1\"\n        },\n        \"client_info\": null\n    }\n}"
+												}
+											]
+										},
+										{
+											"name": "Send OTP [R] - Success Copy",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "6f71931d-3e74-4e98-8257-6494d87d8ea8",
+														"exec": [
+															"const jsonData = pm.response.json();\r",
+															"\r",
+															"pm.test(\"Response Data is correctly returned\", function () {\r",
+															"    pm.expect(jsonData.status).to.eql(\"Successful\");\r",
+															"    pm.expect(jsonData.data.provider_response.delivery_status).to.exist;\r",
+															"    pm.expect(jsonData.data.provider_response.expires_on).to.exist;\r",
+															"    pm.expect(jsonData.data.provider_response.prompt_message).to.exist;\r",
+															"    pm.expect(jsonData.data.provider_response.reference).to.exist;\r",
+															"})\r",
+															"\r",
+															"pm.test(\"Set reference as a collection variable\", function () {\r",
+															" pm.collectionVariables.set(\"otp_reference\", jsonData.data.provider_response.reference);\r",
+															"})"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"id": "bafaf7bb-30cd-485d-a650-f739b3900874",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json",
+														"type": "text"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer {{Token}}",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"action\": \"auth.send-login-otp\",\n    \"data\": {\n        \"customer_ref\": \"{{customer_ref}}\", // 234 Format\n        \"biller_code\": \"{{biller_code}}\" // send this when you have it\n    }\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{base_url}}"
+											},
+											"response": [
+												{
+													"id": "7fc4929d-66bc-4de0-8aa3-3f4721a4a207",
 													"name": "Send Login OTP",
 													"originalRequest": {
 														"method": "POST",
@@ -9439,10 +9572,6 @@
 		},
 		{
 			"key": "login_reference",
-			"value": ""
-		},
-		{
-			"key": "current_subscription_id",
 			"value": ""
 		}
 	]
