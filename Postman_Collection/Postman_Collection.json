@@ -4106,10 +4106,10 @@
 							"name": "Reset PIN",
 							"item": [
 								{
-									"name": "Set New Pin",
+									"name": "Set New PIN",
 									"item": [
 										{
-											"name": "Set New Pin - Success",
+											"name": "Set New PIN - Success",
 											"event": [
 												{
 													"listen": "test",
@@ -4203,7 +4203,7 @@
 											]
 										},
 										{
-											"name": "Set New Pin - Pin Confirmation Mismatch",
+											"name": "Set New PIN - PIN Confirmation Mismatch",
 											"event": [
 												{
 													"listen": "test",
@@ -4297,7 +4297,7 @@
 											]
 										},
 										{
-											"name": "Set New Pin - Empty PIN",
+											"name": "Set New PIN - Empty PIN",
 											"event": [
 												{
 													"listen": "test",
@@ -4312,7 +4312,7 @@
 															"\r",
 															"pm.test('Has message field', function(){ \r",
 															"    pm.expect(jsonData).to.have.property('message');\r",
-															"    pm.expect(jsonData.message).to.include(\"Validation failed\");\r",
+															"    pm.expect(jsonData.message).to.include(\"PIN is required\");\r",
 															"});"
 														],
 														"type": "text/javascript",
@@ -4391,7 +4391,7 @@
 											]
 										},
 										{
-											"name": "Set New Pin - Empty PIN Copy",
+											"name": "Set New PIN - Empty PIN Confirmation",
 											"event": [
 												{
 													"listen": "test",
@@ -4406,7 +4406,7 @@
 															"\r",
 															"pm.test('Has message field', function(){ \r",
 															"    pm.expect(jsonData).to.have.property('message');\r",
-															"    pm.expect(jsonData.message).to.include(\"Validation failed\");\r",
+															"    pm.expect(jsonData.message).to.include(\"PIN Confirmation is required\");\r",
 															"});"
 														],
 														"type": "text/javascript",
@@ -4434,7 +4434,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n    \"action\": \"auth.create-pin\",\n    \"data\": {\n        \"customer_ref\": \"{{customer_ref}}\", // 234 Format\n        \"biller_code\": \"biller_code\",\n        \"pin\": \"\",\n        \"pin_confirmation\": \"{{pin}}\"\n    }\n}",
+													"raw": "{\n    \"action\": \"auth.create-pin\",\n    \"data\": {\n        \"customer_ref\": \"{{customer_ref}}\", // 234 Format\n        \"biller_code\": \"biller_code\",\n        \"pin\": \"{{pin}}\",\n        \"pin_confirmation\": \"\"\n    }\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -4446,6 +4446,100 @@
 											"response": [
 												{
 													"id": "b5a3ca31-3f6f-436d-a98c-1dc7410dccf3",
+													"name": "Set New Pin Pin [R]",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"action\": \"auth.login-pin\",\n    \"data\": {\n        \"customer_ref\": \"1234567890123\", // 234 Format\n        \"pin\": \"12345\",\n        \"pin_confirmation\": \"12345\"\n    }\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{url}}/auth/create-pin"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json",
+															"description": "",
+															"type": "text"
+														}
+													],
+													"cookie": [
+														{
+															"expires": "Invalid Date",
+															"domain": "",
+															"path": ""
+														}
+													],
+													"responseTime": null,
+													"body": "{\n    \"status\": \"Successful\",\n    \"message\": \"Transaction processed successfully\",\n    \"data\": {\n        \"provider_response_code\": \"00\",\n        \"provider\": \"PaywithAccount\",\n        \"errors\": null,\n        \"error\": null,\n        \"provider_response\": {\n            \"status\": \"ACTIVE\",\n            \"created_on\": \"2020-04-05 23:08:01\",\n            \"meta\": {}\n        },\n        \"client_info\": {\n            \"name\": null,\n            \"id\": null,\n            \"bank_cbn_code\": null,\n            \"bank_name\": null,\n            \"console_url\": null,\n            \"js_background_image\": null,\n            \"css_url\": null,\n            \"logo_url\": null,\n            \"footer_text\": null,\n            \"show_options_icon\": false,\n            \"paginate\": false,\n            \"paginate_count\": 0,\n            \"options\": null,\n            \"merchant\": null,\n            \"colors\": null,\n            \"meta\": null\n        }\n    }\n}"
+												}
+											]
+										},
+										{
+											"name": "Set New PIN - Empty PIN Confirmation Copy",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "0c59aeb6-a9fd-450a-9373-4ea7900fc899",
+														"exec": [
+															"const jsonData = pm.response.json();\r",
+															"\r",
+															"pm.test('Has status field', function(){ \r",
+															"    pm.expect(jsonData).to.have.property('status'); \r",
+															"});\r",
+															"\r",
+															"pm.test('Has message field', function(){ \r",
+															"    pm.expect(jsonData).to.have.property('message');\r",
+															"    pm.expect(jsonData.message).to.include(\"PIN Confirmation is required\");\r",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {}
+													}
+												}
+											],
+											"id": "f810ccdb-1674-4767-93b4-65765e61781a",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json",
+														"type": "text"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer {{Token}}",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"action\": \"auth.create-pin\",\n    \"data\": {\n        \"customer_ref\": \"{{customer_ref}}\", // 234 Format\n        \"biller_code\": \"biller_code\",\n        \"pin\": \"{{pin}}\",\n        \"pin_confirmation\": \"\"\n    }\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{base_url}}"
+											},
+											"response": [
+												{
+													"id": "ec8733ac-ebb3-4d0e-893b-181133da4bb3",
 													"name": "Set New Pin Pin [R]",
 													"originalRequest": {
 														"method": "POST",
