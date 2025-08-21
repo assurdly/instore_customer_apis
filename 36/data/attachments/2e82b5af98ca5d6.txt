@@ -1,9 +1,0 @@
-{
-    "action": "auth.create-password",
-    "data": {
-        "customer_ref": "1234567890123", 
-        "biller_code": "biller_code",
-        "password": "Password123!",
-        "password_confirmation": "Password123!"
-    }
-}
