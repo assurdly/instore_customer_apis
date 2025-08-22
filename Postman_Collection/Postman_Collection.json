@@ -11144,7 +11144,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "Bearer {{wrong_token}}",
+										"value": "Bearer {{Token}}",
 										"type": "text"
 									}
 								],
@@ -13717,72 +13717,78 @@
 					"id": "e75efd4b-f66a-4561-8717-02f3bbdf1f93"
 				},
 				{
-					"name": "Get Customer Data [R]",
-					"id": "7d331772-01aa-4ffd-9e52-bbe2dbfa5ed9",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{Token}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"action\" : \"misc.get-customer\",\n    \"data\": {\n        \"customer_ref\":\"{{customer_ref}}\" // 234 Format\n    }\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{base_url}}",
-						"description": "List of data to Cach offlne\n\n1. Accounts\n    \n    1. All accounts and their last balance\n        \n2. Loan Limits\n    \n3. Membership status\n    \n4. Onboard Approval Status"
-					},
-					"response": [
+					"name": "Get Customer Data",
+					"item": [
 						{
-							"id": "f605de34-360f-4f9a-8c29-9be60a31f5a4",
-							"name": "Get Customer Data",
-							"originalRequest": {
+							"name": "Get Customer Data [R]",
+							"id": "7d331772-01aa-4ffd-9e52-bbe2dbfa5ed9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
 								"method": "POST",
-								"header": [],
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{Token}}",
+										"type": "text"
+									}
+								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"action\" : \"misc.get-customer\",\n    \"data\": {\n        \"customer_ref\":\"1234567890123\" // 234 Format\n    }\n}",
+									"raw": "{\n    \"action\" : \"misc.get-customer\",\n    \"data\": {\n        \"customer_ref\":\"{{customer_ref}}\" // 234 Format\n    }\n}",
 									"options": {
 										"raw": {
 											"language": "json"
 										}
 									}
 								},
-								"url": "{{url}}/misc/get-onboard status"
+								"url": "{{base_url}}",
+								"description": "List of data to Cach offlne\n\n1. Accounts\n    \n    1. All accounts and their last balance\n        \n2. Loan Limits\n    \n3. Membership status\n    \n4. Onboard Approval Status"
 							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
+							"response": [
 								{
-									"key": "Content-Type",
-									"value": "application/json",
-									"description": "",
-									"type": "text"
+									"id": "f605de34-360f-4f9a-8c29-9be60a31f5a4",
+									"name": "Get Customer Data",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"action\" : \"misc.get-customer\",\n    \"data\": {\n        \"customer_ref\":\"1234567890123\" // 234 Format\n    }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{url}}/misc/get-onboard status"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [
+										{
+											"expires": "Invalid Date",
+											"domain": "",
+											"path": ""
+										}
+									],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"Successful\",\n    \"message\": \"Transaction processed successful\",\n    \"data\": {\n        \"provider_response_code\": \"00\",\n        \"provider\": \"Pay4Me\",\n        \"errors\": null,\n        \"error\": null,\n        \"provider_response\": {\n            \"approval_status\": \"approved\",// \"declined|pending|approved\" //approved means customer understands products\n            \"membership_status\": \"active\", // \"inactive|active\n            \"membership_plan\": \"Premium\",\n\n            \"is_pwa_biller\": \"true\", // \"true|false|null\"\n            \"is_pay4me_distro\": \"true\", // \"true|false|null\"\n            \n            //\n            \"can_take_pay4me\": \"true|false\", //true|false // Lookout for this.. use it to hide the Pay4Me button\n            \"lender_terms_url\": null,\n            \"loan_terms\": {\n                \"tenure\": \"12\",\n                \"interest_rate\": \"10%\",\n                \"repayment_frequency\": \"monthly\"            \n            },\n            \"running_loans\": [\n                { // would be null when there's no running loan\n                    \"amount\": \"N500,000\",\n                    \"due_date\": \"29-03-2025\"\n                },\n                { // would be null when there's no running loan\n                    \"amount\": \"N500,000\",\n                    \"due_date\": \"29-03-2025\"\n                }\n            ],\n            \"pay4me_limit\": \"N500,000.00 | N0.00\",\n            \"pay4me_used\": \"N300,000.00 | N0.00\",\n            \"pay4me_available\": \"N200,000.00 | N0.00\",\n            \n            \"meta\": {\n                \"reference\": \"{{$randomPassword}}\"\n            }\n        }\n    }\n}"
 								}
-							],
-							"cookie": [
-								{
-									"expires": "Invalid Date",
-									"domain": "",
-									"path": ""
-								}
-							],
-							"responseTime": null,
-							"body": "{\n    \"status\": \"Successful\",\n    \"message\": \"Transaction processed successful\",\n    \"data\": {\n        \"provider_response_code\": \"00\",\n        \"provider\": \"Pay4Me\",\n        \"errors\": null,\n        \"error\": null,\n        \"provider_response\": {\n            \"approval_status\": \"approved\",// \"declined|pending|approved\" //approved means customer understands products\n            \"membership_status\": \"active\", // \"inactive|active\n            \"membership_plan\": \"Premium\",\n\n            \"is_pwa_biller\": \"true\", // \"true|false|null\"\n            \"is_pay4me_distro\": \"true\", // \"true|false|null\"\n            \n            //\n            \"can_take_pay4me\": \"true|false\", //true|false // Lookout for this.. use it to hide the Pay4Me button\n            \"lender_terms_url\": null,\n            \"loan_terms\": {\n                \"tenure\": \"12\",\n                \"interest_rate\": \"10%\",\n                \"repayment_frequency\": \"monthly\"            \n            },\n            \"running_loans\": [\n                { // would be null when there's no running loan\n                    \"amount\": \"N500,000\",\n                    \"due_date\": \"29-03-2025\"\n                },\n                { // would be null when there's no running loan\n                    \"amount\": \"N500,000\",\n                    \"due_date\": \"29-03-2025\"\n                }\n            ],\n            \"pay4me_limit\": \"N500,000.00 | N0.00\",\n            \"pay4me_used\": \"N300,000.00 | N0.00\",\n            \"pay4me_available\": \"N200,000.00 | N0.00\",\n            \n            \"meta\": {\n                \"reference\": \"{{$randomPassword}}\"\n            }\n        }\n    }\n}"
+							]
 						}
-					]
+					],
+					"id": "7524754c-c249-47f3-87bf-afa7a750f70e"
 				}
 			],
 			"id": "69005ca2-bd2f-495f-8605-14faf8e4add7"
