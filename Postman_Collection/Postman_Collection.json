@@ -10639,7 +10639,9 @@
 											"    pm.expect(jsonData.data.provider_response).to.be.an(\"object\");\r",
 											"    pm.expect(jsonData.data.provider_response).to.have.property(\"status\");\r",
 											"\r",
-											"}"
+											"})\r",
+											"\r",
+											"pm.collectionVariables.set(\"inactive_sub_id\", jsonData.data.provider_response.subscription_id);"
 										],
 										"type": "text/javascript",
 										"packages": {}
