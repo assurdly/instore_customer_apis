@@ -10717,7 +10717,7 @@
 							]
 						},
 						{
-							"name": "Cancel Subscription [R] Copy",
+							"name": "Cancel Subscription [R] - empty customer reference",
 							"event": [
 								{
 									"listen": "test",
@@ -10726,20 +10726,21 @@
 										"exec": [
 											"const jsonData = pm.response.json();\r",
 											"\r",
-											"pm.test(\"Check if the status is successful\", function () {\r",
-											"    pm.expect(jsonData.status).to.eql(\"Successful\");\r",
+											"pm.test(\"Check if the status is Processing\", function () {\r",
+											"    pm.expect(jsonData.status).to.eql(\"Failed\");\r",
 											"});\r",
 											"\r",
-											"pm.test(\"Check that data returns correctly\", function () {\r",
-											"    pm.expect(jsonData.data).to.not.eql(null);\r",
-											"    pm.expect(jsonData.data.provider_response).to.be.an(\"object\");\r",
-											"    pm.expect(jsonData.data.provider_response).to.have.property(\"status\");\r",
+											"pm.test(\"Check that message is returned\", function () {\r",
+											"    pm.expect(jsonData.message).to.not.be.null;\r",
+											"});\r",
 											"\r",
-											"})\r",
+											"pm.test(\"Check if data object in response returns correctly\", function () {\r",
+											"    pm.expect(jsonData.data).to.have.property(\"error\");\r",
+											"    pm.expect(jsonData.data.error).to.have.property(\"code\");\r",
+											"    pm.expect(jsonData.data.error.code).to.not.be.null;\r",
+											"});\r",
 											"\r",
-											"pm.test(\"Set subscription id here as a variable\", function () {\r",
-											" pm.collectionVariables.set(\"inactive_sub_id\", jsonData.data.provider_response.subscription_id);\r",
-											"})"
+											""
 										],
 										"type": "text/javascript",
 										"packages": {}
@@ -10761,7 +10762,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"action\": \"subscription.cancel\",\n    \"data\": {\n        \"customer_ref\": \"{{customer_ref}}\",\n        \"biller_code\": \"010\",\n        \"subscription_id\": \"{{current_subscription_id}}\"\n    }\n}",
+									"raw": "{\n    \"action\": \"subscription.cancel\",\n    \"data\": {\n        \"customer_ref\": \"\",\n        \"biller_code\": \"010\",\n        \"subscription_id\": \"{{current_subscription_id}}\"\n    }\n}",
 									"options": {
 										"raw": {
 											"language": "json"
