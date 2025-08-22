@@ -1,8 +1,0 @@
-{
-    "action": "subscription.cancel",
-    "data": {
-        "customer_ref": "1234567890123",
-        "biller_code": "010",
-        "subscription_id": "18984"
-    }
-}
