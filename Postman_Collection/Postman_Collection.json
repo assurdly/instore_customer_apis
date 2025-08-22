@@ -10422,7 +10422,7 @@
 							]
 						},
 						{
-							"name": "Manage Subscription [R] - empty customer reference Copy",
+							"name": "Manage Subscription [R] - Invalid token",
 							"event": [
 								{
 									"listen": "test",
@@ -10460,7 +10460,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "Bearer {{Token}}",
+										"value": "Bearer {{wrong_token}}",
 										"type": "text"
 									}
 								],
@@ -10479,6 +10479,103 @@
 							"response": [
 								{
 									"id": "45c29a07-5d2f-4d7b-9269-09a43175f14e",
+									"name": "Manage  Subscription",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"action\": \"subscription.manage\",\n    \"data\": {\n        \"customer_ref\": \"1234567890\",\n        \"biller_code\": \"\",\n        \"subscription_id\": \"\",\n        \"action\": \"pause\" // or resume\n    }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{url}}/subscription/pause"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [
+										{
+											"expires": "Invalid Date",
+											"domain": "",
+											"path": ""
+										}
+									],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"Successful\",\n    \"message\": \"Transaction processed successfully\",\n    \"data\": {\n        \"provider_response_code\": \"00\",\n        \"provider\": \"PayWithAccount\",\n        \"errors\": null,\n        \"error\": null,\n        \"provider_response\": {\n            \"status\": \"paused\",\n            \"created_on\": \"2025-08-08 16:53:09\",\n            \"meta\": {\n                \"start_date\": \"2025-08-09\"\n            }\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Manage Subscription [R] - No Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "a79be2fe-54dd-420d-b449-c1e60d36a036",
+										"exec": [
+											"const jsonData = pm.response.json();\r",
+											"\r",
+											"pm.test(\"Check that response staus is correct\",function () {\r",
+											"    pm.expect(jsonData.status).to.eql(\"Failed\");\r",
+											"})\r",
+											"\r",
+											"\r",
+											"pm.test(\"Check that response message is correct\", function () {\r",
+											"    pm.expect(jsonData.message).to.exist;\r",
+											"    pm.expect(jsonData.message).to.not.be.null;\r",
+											"})\r",
+											"\r",
+											"pm.test(\"Check that provider response data is correct\", function () {\r",
+											"    pm.expect(jsonData.data.errors).to.be.an(\"array\");\r",
+											"    pm.expect(jsonData.data.error).to.be.an(\"object\");\r",
+											"})"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "3316cdbf-a0c3-4b98-ab0f-ccf6aa8f6451",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{wrong_token}}",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"action\": \"subscription.manage\",\n    \"data\": {\n        \"customer_ref\": \"{{customer_ref}}\",\n        \"biller_code\": \"{{biller_code}}\",\n        \"subscription_id\": \"{{current_subscription_id}}\",\n        \"action\": \"pause\" // or resume\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}",
+								"description": "List of data to Cach offlne\n\n1. Accounts\n    \n    1. All accounts and their last balance\n        \n2. Loan Limits\n    \n3. Membership status\n    \n4. Onboard Approval Status"
+							},
+							"response": [
+								{
+									"id": "370c8437-7744-436e-857f-c8fb5f22626c",
 									"name": "Manage  Subscription",
 									"originalRequest": {
 										"method": "POST",
