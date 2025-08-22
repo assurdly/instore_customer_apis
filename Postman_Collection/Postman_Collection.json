@@ -10228,6 +10228,101 @@
 									"body": "{\n    \"status\": \"Successful\",\n    \"message\": \"Transaction processed successfully\",\n    \"data\": {\n        \"provider_response_code\": \"00\",\n        \"provider\": \"PayWithAccount\",\n        \"errors\": null,\n        \"error\": null,\n        \"provider_response\": {\n            \"status\": \"paused\",\n            \"created_on\": \"2025-08-08 16:53:09\",\n            \"meta\": {\n                \"start_date\": \"2025-08-09\"\n            }\n        }\n    }\n}"
 								}
 							]
+						},
+						{
+							"name": "Manage Subscription [R] - Inactive subscription Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "a79be2fe-54dd-420d-b449-c1e60d36a036",
+										"exec": [
+											"const jsonData = pm.response.json();\r",
+											"\r",
+											"pm.test(\"Check that response staus is correct\",function () {\r",
+											"    pm.expect(jsonData.status).to.eql(\"Failed\");\r",
+											"})\r",
+											"\r",
+											"\r",
+											"pm.test(\"Check that response message is correct\", function () {\r",
+											"    pm.expect(jsonData.message).to.eql(\"Transaction failed\");\r",
+											"})\r",
+											"\r",
+											"pm.test(\"Check that provider response data is correct\", function () {\r",
+											"    pm.expect(jsonData.data.errors).to.be.an(\"array\");\r",
+											"    pm.expect(jsonData.data.error).to.be.an(\"object\");\r",
+											"})"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "2e4b4929-bcc8-4725-b612-7afeb0688b60",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{Token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"action\": \"subscription.manage\",\n    \"data\": {\n        \"customer_ref\": \"2347080507367\",\n        \"biller_code\": \"biller\",\n        \"subscription_id\": \"18984\",\n        \"action\": \"pause\" // or resume\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}",
+								"description": "List of data to Cach offlne\n\n1. Accounts\n    \n    1. All accounts and their last balance\n        \n2. Loan Limits\n    \n3. Membership status\n    \n4. Onboard Approval Status"
+							},
+							"response": [
+								{
+									"id": "a9cc6960-6a8d-4c3a-9acf-bef989b4c78f",
+									"name": "Manage  Subscription",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"action\": \"subscription.manage\",\n    \"data\": {\n        \"customer_ref\": \"1234567890\",\n        \"biller_code\": \"\",\n        \"subscription_id\": \"\",\n        \"action\": \"pause\" // or resume\n    }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{url}}/subscription/pause"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [
+										{
+											"expires": "Invalid Date",
+											"domain": "",
+											"path": ""
+										}
+									],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"Successful\",\n    \"message\": \"Transaction processed successfully\",\n    \"data\": {\n        \"provider_response_code\": \"00\",\n        \"provider\": \"PayWithAccount\",\n        \"errors\": null,\n        \"error\": null,\n        \"provider_response\": {\n            \"status\": \"paused\",\n            \"created_on\": \"2025-08-08 16:53:09\",\n            \"meta\": {\n                \"start_date\": \"2025-08-09\"\n            }\n        }\n    }\n}"
+								}
+							]
 						}
 					],
 					"id": "2cbd3ad2-3382-47f0-88ec-9b3fc678d9de"
