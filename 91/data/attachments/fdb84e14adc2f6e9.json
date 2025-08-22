@@ -1,0 +1,12 @@
+{
+    "Authorization": "Bearer 6ec10a2f18cf9f894c49462b7c24a3d9",
+    "Content-Type": "application/json",
+    "User-Agent": "PostmanRuntime/7.39.1",
+    "Accept": "*/*",
+    "Cache-Control": "no-cache",
+    "Postman-Token": "316f4c7c-57cf-4428-95d8-8442c5e1798c",
+    "Host": "pwa-instore.bits.dev.onepipe.io",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive",
+    "Content-Length": "189"
+}

@@ -1,0 +1,603 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","2824","Make First Payment - Invalid Account Number","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:36 UTC 2025","passed","Fri Aug 22 08:13:39 UTC 2025","Signup > Make First Payment","Onboarding","",""
+"","147","Set New PIN - No Auth Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:55 UTC 2025","passed","Fri Aug 22 08:13:56 UTC 2025","Pin/Password Management [R] Copy > Reset PIN > Set New PIN","Settings","",""
+"","149","Get Countries [R] - Invalid Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:17 UTC 2025","passed","Fri Aug 22 08:14:17 UTC 2025","Get Countries","Misc","",""
+"","152","Logout - Invalid Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:54 UTC 2025","passed","Fri Aug 22 08:13:54 UTC 2025","Logout","Onboarding","",""
+"","154","Create Password - Empty Password and Password Confirmation","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:53 UTC 2025","passed","Fri Aug 22 08:13:53 UTC 2025","Login > Create Password","Onboarding","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","161","Manage Subscription [R] - empty customer reference","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:13 UTC 2025","passed","Fri Aug 22 08:14:13 UTC 2025","Manage Subscription","Subscription","",""
+"","146","Create Password - No Auth Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:53 UTC 2025","passed","Fri Aug 22 08:13:53 UTC 2025","Login > Create Password","Onboarding","",""
+"","193","Set new  Password [R] - Password Confirmation Mismatch","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:58 UTC 2025","passed","Fri Aug 22 08:13:59 UTC 2025","Pin/Password Management [R] Copy > Reset Password (For Billers Only) > Set New Password","Settings","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","156","Get Tnc [R] - No Auth Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:15 UTC 2025","passed","Fri Aug 22 08:14:15 UTC 2025","Get TnC","Misc","",""
+"","148","Create Password - Invalid Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:53 UTC 2025","passed","Fri Aug 22 08:13:53 UTC 2025","Login > Create Password","Onboarding","",""
+"","155","Send OTP - Empty Customer Ref.","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:00 UTC 2025","passed","Fri Aug 22 08:14:00 UTC 2025","Pin/Password Management [R] Copy > Reset Password (For Billers Only) > Send OTP","Settings","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","150","Create Subscription [R] - Invalid token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:09 UTC 2025","passed","Fri Aug 22 08:14:09 UTC 2025","Create Subscription","Subscription","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","166","Get Tnc [R] - Empty Utility Field","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:15 UTC 2025","passed","Fri Aug 22 08:14:15 UTC 2025","Get TnC","Misc","",""
+"","5840","Make First Payment - Invalid Bank Code","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:39 UTC 2025","passed","Fri Aug 22 08:13:44 UTC 2025","Signup > Make First Payment","Onboarding","",""
+"","156","Make First Payment - Empty First Name field","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:35 UTC 2025","passed","Fri Aug 22 08:13:35 UTC 2025","Signup > Make First Payment","Onboarding","",""
+"","166","POST - Logout","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:54 UTC 2025","passed","Fri Aug 22 08:13:54 UTC 2025","Logout","Onboarding","",""
+"","175","Begin Signup - Invalid Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:24 UTC 2025","passed","Fri Aug 22 08:13:24 UTC 2025","Signup > Begin Signup","Onboarding","",""
+"","157","Get Countries [R] - Empty Customer Reference","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:16 UTC 2025","passed","Fri Aug 22 08:14:17 UTC 2025","Get Countries","Misc","",""
+"","158","Send OTP - Invalid Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:00 UTC 2025","passed","Fri Aug 22 08:14:00 UTC 2025","Pin/Password Management [R] Copy > Reset Password (For Billers Only) > Send OTP","Settings","",""
+"","155","Login - Invalid token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:47 UTC 2025","passed","Fri Aug 22 08:13:47 UTC 2025","Login > Login","Onboarding","",""
+"","153","Verify Login OTP","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:48 UTC 2025","passed","Fri Aug 22 08:13:48 UTC 2025","Login > Verify Login OTP","Onboarding","",""
+"","150","Get Countries [R] - No Auth Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:17 UTC 2025","passed","Fri Aug 22 08:14:17 UTC 2025","Get Countries","Misc","",""
+"","155","Send Login OTP - invalid token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:48 UTC 2025","passed","Fri Aug 22 08:13:48 UTC 2025","Login > Send Login OTP","Onboarding","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","150","Get TnC [R] - Invalid Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:15 UTC 2025","passed","Fri Aug 22 08:14:15 UTC 2025","Get TnC","Misc","",""
+"","152","Create Password - Success","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:52 UTC 2025","failed","Fri Aug 22 08:13:52 UTC 2025","Login > Create Password","Onboarding","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","160","Get Banks [R]  - empty token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:16 UTC 2025","passed","Fri Aug 22 08:14:16 UTC 2025","Get Banks","Misc","",""
+"","2700","Verify User Info & ID - Empty Last Name","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:30 UTC 2025","failed","Fri Aug 22 08:13:33 UTC 2025","Signup > Verify User Information and ID","Onboarding","",""
+"","149","Login - No Auth Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:47 UTC 2025","passed","Fri Aug 22 08:13:47 UTC 2025","Login > Login","Onboarding","",""
+"","156","Verify User Info & ID - Empty Phone Number Field Copy","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:33 UTC 2025","passed","Fri Aug 22 08:13:34 UTC 2025","Signup > Verify User Information and ID","Onboarding","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","337","Get Utility [R] - Success","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:13 UTC 2025","passed","Fri Aug 22 08:14:14 UTC 2025","Get Utility","Misc","",""
+"","156","Set new  Password [R] - Empty Password and Password Confirmation","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:59 UTC 2025","passed","Fri Aug 22 08:13:59 UTC 2025","Pin/Password Management [R] Copy > Reset Password (For Billers Only) > Set New Password","Settings","",""
+"","2452","Verify User Info & ID - Empty First Name","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:28 UTC 2025","failed","Fri Aug 22 08:13:30 UTC 2025","Signup > Verify User Information and ID","Onboarding","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","154","Change PIN [R] - Empty New PIN","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:02 UTC 2025","passed","Fri Aug 22 08:14:02 UTC 2025","Pin/Password Management [R] Copy > Change PIN","Settings","",""
+"","152","POST - Create PIN - No Auth Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:50 UTC 2025","passed","Fri Aug 22 08:13:50 UTC 2025","Login > Create PIN","Onboarding","",""
+"","151","Create Password Confirmation Mismatch","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:52 UTC 2025","passed","Fri Aug 22 08:13:52 UTC 2025","Login > Create Password","Onboarding","",""
+"","150","Verify Login OTP  - Invalid token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:49 UTC 2025","failed","Fri Aug 22 08:13:49 UTC 2025","Login > Verify Login OTP","Onboarding","",""
+"","168","Verify First Payment - Empty Transaction Reference","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:45 UTC 2025","passed","Fri Aug 22 08:13:46 UTC 2025","Signup > Verify First Payment","Onboarding","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","4298","Create Subscription [R] - Invalid account number","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:04 UTC 2025","passed","Fri Aug 22 08:14:09 UTC 2025","Create Subscription","Subscription","",""
+"","158","Get Countries [R] - Empty Utility Field","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:17 UTC 2025","passed","Fri Aug 22 08:14:17 UTC 2025","Get Countries","Misc","",""
+"","162","Manage Biometrics - Empty Signature","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:51 UTC 2025","passed","Fri Aug 22 08:13:51 UTC 2025","Login > Manage Biometrics","Onboarding","",""
+"","185","Verify User Info & ID - Invalid email","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:33 UTC 2025","passed","Fri Aug 22 08:13:33 UTC 2025","Signup > Verify User Information and ID","Onboarding","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","165","Upgrade  Subscription [R] - empty required field","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:11 UTC 2025","passed","Fri Aug 22 08:14:11 UTC 2025","Upgrade Subscription","Subscription","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","149","Get Utility [R] - No Auth Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:14 UTC 2025","passed","Fri Aug 22 08:14:14 UTC 2025","Get Utility","Misc","",""
+"","158","POST - Create PIN - Empty PIN and Empty PIN Confirmation","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:50 UTC 2025","passed","Fri Aug 22 08:13:50 UTC 2025","Login > Create PIN","Onboarding","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","162","Cancel Subscription [R]","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:13 UTC 2025","passed","Fri Aug 22 08:14:13 UTC 2025","Cancel Subscription","Subscription","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","162","Upgrade  Subscription [R] - invalid token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:11 UTC 2025","passed","Fri Aug 22 08:14:11 UTC 2025","Upgrade Subscription","Subscription","",""
+"","164","Send OTP - Empty Biller Code","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:00 UTC 2025","passed","Fri Aug 22 08:14:00 UTC 2025","Pin/Password Management [R] Copy > Reset Password (For Billers Only) > Send OTP","Settings","",""
+"","153","Verify OTP [R] - Empty Biller Code","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:01 UTC 2025","passed","Fri Aug 22 08:14:01 UTC 2025","Pin/Password Management [R] Copy > Reset Password (For Billers Only) > Verify OTP","Settings","",""
+"","153","Verify Login OTP  - empty biller code","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:49 UTC 2025","passed","Fri Aug 22 08:13:49 UTC 2025","Login > Verify Login OTP","Onboarding","",""
+"","155","Verify First Payment - No Auth Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:46 UTC 2025","passed","Fri Aug 22 08:13:46 UTC 2025","Signup > Verify First Payment","Onboarding","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","163","Get Tnc [R] - Empty Customer Reference","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:14 UTC 2025","passed","Fri Aug 22 08:14:15 UTC 2025","Get TnC","Misc","",""
+"","152","Send OTP [R] - Empty Biller Code","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:56 UTC 2025","passed","Fri Aug 22 08:13:56 UTC 2025","Pin/Password Management [R] Copy > Reset PIN > Send OTP","Settings","",""
+"","404","POST - Login","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:46 UTC 2025","failed","Fri Aug 22 08:13:46 UTC 2025","Login > Login","Onboarding","",""
+"","164","POST - Verify PIN - Wrong pin","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:51 UTC 2025","failed","Fri Aug 22 08:13:51 UTC 2025","Login > Verify PIN","Onboarding","",""
+"","291","Verify Login OTP  - Invalid OTP","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:48 UTC 2025","passed","Fri Aug 22 08:13:49 UTC 2025","Login > Verify Login OTP","Onboarding","",""
+"","320","Send Login OTP - invalid customer ref","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:48 UTC 2025","passed","Fri Aug 22 08:13:48 UTC 2025","Login > Send Login OTP","Onboarding","",""
+"","165","Manage Biometrics - Wrong PIN","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:51 UTC 2025","failed","Fri Aug 22 08:13:52 UTC 2025","Login > Manage Biometrics","Onboarding","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","148","Manage Subscription [R] - Invalid token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:13 UTC 2025","passed","Fri Aug 22 08:14:13 UTC 2025","Manage Subscription","Subscription","",""
+"","154","Make First Payment - No Auth Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:45 UTC 2025","passed","Fri Aug 22 08:13:45 UTC 2025","Signup > Make First Payment","Onboarding","",""
+"","162","Verify Password - Success","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:53 UTC 2025","failed","Fri Aug 22 08:13:53 UTC 2025","Login > Verify Password","Onboarding","",""
+"","147","Set New PIN - Invalid Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:55 UTC 2025","passed","Fri Aug 22 08:13:55 UTC 2025","Pin/Password Management [R] Copy > Reset PIN > Set New PIN","Settings","",""
+"","150","Send Login OTP - Empty token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:48 UTC 2025","passed","Fri Aug 22 08:13:48 UTC 2025","Login > Send Login OTP","Onboarding","",""
+"","156","Make First Payment - Empty Membership Plan","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:35 UTC 2025","passed","Fri Aug 22 08:13:36 UTC 2025","Signup > Make First Payment","Onboarding","",""
+"","159","Begin Signup - No Auth Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:24 UTC 2025","passed","Fri Aug 22 08:13:24 UTC 2025","Signup > Begin Signup","Onboarding","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","492","Get Banks [R]","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:15 UTC 2025","passed","Fri Aug 22 08:14:16 UTC 2025","Get Banks","Misc","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","153","Manage Subscription [R] - empty biller code","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:12 UTC 2025","passed","Fri Aug 22 08:14:13 UTC 2025","Manage Subscription","Subscription","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","308","Get Customer Data [R]","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:21 UTC 2025","passed","Fri Aug 22 08:14:21 UTC 2025","","Dashboard","",""
+"","187","Verify OTP [R] - No Auth Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:01 UTC 2025","passed","Fri Aug 22 08:14:02 UTC 2025","Pin/Password Management [R] Copy > Reset Password (For Billers Only) > Verify OTP","Settings","",""
+"","152","Create Password - Empty Password","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:52 UTC 2025","passed","Fri Aug 22 08:13:53 UTC 2025","Login > Create Password","Onboarding","",""
+"","175","Send Login OTP - empty biller code","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:47 UTC 2025","passed","Fri Aug 22 08:13:48 UTC 2025","Login > Send Login OTP","Onboarding","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","1146","Create Subscription [R]","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:03 UTC 2025","passed","Fri Aug 22 08:14:04 UTC 2025","Create Subscription","Subscription","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","156","Get Banks [R]  - empty  customer reference","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:16 UTC 2025","passed","Fri Aug 22 08:14:16 UTC 2025","Get Banks","Misc","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","160","Change Password [R] - Success","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:03 UTC 2025","passed","Fri Aug 22 08:14:03 UTC 2025","Pin/Password Management [R] Copy > Change Password","Settings","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","769","Manage Subscription [R] - Inactive subscription","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:12 UTC 2025","passed","Fri Aug 22 08:14:12 UTC 2025","Manage Subscription","Subscription","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","1555","Upgrade  Subscription [R]","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:09 UTC 2025","failed","Fri Aug 22 08:14:11 UTC 2025","Upgrade Subscription","Subscription","",""
+"","166","Set New PIN - Empty PIN","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:55 UTC 2025","passed","Fri Aug 22 08:13:55 UTC 2025","Pin/Password Management [R] Copy > Reset PIN > Set New PIN","Settings","",""
+"","179","Begin Signup - Empty customer ref","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:24 UTC 2025","failed","Fri Aug 22 08:13:24 UTC 2025","Signup > Begin Signup","Onboarding","",""
+"","165","Verify User Info & ID - Empty Customer Ref","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:27 UTC 2025","passed","Fri Aug 22 08:13:28 UTC 2025","Signup > Verify User Information and ID","Onboarding","",""
+"","176","POST - Create PIN - Success","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:49 UTC 2025","passed","Fri Aug 22 08:13:49 UTC 2025","Login > Create PIN","Onboarding","",""
+"","152","Make First Payment - Invalid Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:45 UTC 2025","passed","Fri Aug 22 08:13:45 UTC 2025","Signup > Make First Payment","Onboarding","",""
+"","186","Begin Signup - Empty Country Field","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:24 UTC 2025","passed","Fri Aug 22 08:13:24 UTC 2025","Signup > Begin Signup","Onboarding","",""
+"","148","Verify PIN - Invalid Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:51 UTC 2025","passed","Fri Aug 22 08:13:51 UTC 2025","Login > Verify PIN","Onboarding","",""
+"","165","Set new  Password [R] - Empty Password Confirmation","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:59 UTC 2025","passed","Fri Aug 22 08:13:59 UTC 2025","Pin/Password Management [R] Copy > Reset Password (For Billers Only) > Set New Password","Settings","",""
+"","155","Verify Password - Empty Password","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:53 UTC 2025","passed","Fri Aug 22 08:13:54 UTC 2025","Login > Verify Password","Onboarding","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","153","Upgrade  Subscription [R] - No auth token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:11 UTC 2025","passed","Fri Aug 22 08:14:11 UTC 2025","Upgrade Subscription","Subscription","",""
+"","302","Transactions [R]","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:20 UTC 2025","passed","Fri Aug 22 08:14:20 UTC 2025","Transactions","Dashboard","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","168","Change PIN [R] - No Auth Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:03 UTC 2025","passed","Fri Aug 22 08:14:03 UTC 2025","Pin/Password Management [R] Copy > Change PIN","Settings","",""
+"","165","Set New PIN - PIN Confirmation Mismatch","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:55 UTC 2025","passed","Fri Aug 22 08:13:55 UTC 2025","Pin/Password Management [R] Copy > Reset PIN > Set New PIN","Settings","",""
+"","158","Verify OTP [R - No Auth Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:58 UTC 2025","passed","Fri Aug 22 08:13:58 UTC 2025","Pin/Password Management [R] Copy > Reset PIN > Verify OTP","Settings","",""
+"","954","Begin Signup","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:23 UTC 2025","passed","Fri Aug 22 08:13:24 UTC 2025","Signup > Begin Signup","Onboarding","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","301","Get Tnc [R] - Success","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:14 UTC 2025","passed","Fri Aug 22 08:14:14 UTC 2025","Get TnC","Misc","",""
+"","154","Verify Password - No Auth Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:54 UTC 2025","passed","Fri Aug 22 08:13:54 UTC 2025","Login > Verify Password","Onboarding","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","154","Get Utility [R] - Empty Utility Field","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:14 UTC 2025","passed","Fri Aug 22 08:14:14 UTC 2025","Get Utility","Misc","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","157","Create Subscription [R] - empty token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:09 UTC 2025","passed","Fri Aug 22 08:14:09 UTC 2025","Create Subscription","Subscription","",""
+"","151","Lookup Bank account [R] - Invalid token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:19 UTC 2025","passed","Fri Aug 22 08:14:19 UTC 2025","Lookup Bank Account","Misc","",""
+"","531","Lookup customer ref","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:19 UTC 2025","passed","Fri Aug 22 08:14:20 UTC 2025","Lookup customer ref","Misc","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","156","Get Utility [R] - Invalid Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:14 UTC 2025","passed","Fri Aug 22 08:14:14 UTC 2025","Get Utility","Misc","",""
+"","158","POST - Create PIN - Invalid Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:50 UTC 2025","passed","Fri Aug 22 08:13:50 UTC 2025","Login > Create PIN","Onboarding","",""
+"","155","Make First Payment - Invalid Email","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:35 UTC 2025","passed","Fri Aug 22 08:13:35 UTC 2025","Signup > Make First Payment","Onboarding","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","155","Upgrade  Subscription [R] - empty customer reference","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:11 UTC 2025","passed","Fri Aug 22 08:14:11 UTC 2025","Upgrade Subscription","Subscription","",""
+"","158","Verify OTP [R] - Empty OTP","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:57 UTC 2025","passed","Fri Aug 22 08:13:58 UTC 2025","Pin/Password Management [R] Copy > Reset PIN > Verify OTP","Settings","",""
+"","168","Set new  Password [R] - Empty Password","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:59 UTC 2025","passed","Fri Aug 22 08:13:59 UTC 2025","Pin/Password Management [R] Copy > Reset Password (For Billers Only) > Set New Password","Settings","",""
+"","166","Verify OTP [R] - Invalid Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:01 UTC 2025","passed","Fri Aug 22 08:14:01 UTC 2025","Pin/Password Management [R] Copy > Reset Password (For Billers Only) > Verify OTP","Settings","",""
+"","157","Verify PIN - No Auth Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:51 UTC 2025","passed","Fri Aug 22 08:13:51 UTC 2025","Login > Verify PIN","Onboarding","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","169","Upgrade  Subscription [R] - invalid account number","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:11 UTC 2025","passed","Fri Aug 22 08:14:11 UTC 2025","Upgrade Subscription","Subscription","",""
+"","155","Verify Password - Wrong Password","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:53 UTC 2025","passed","Fri Aug 22 08:13:53 UTC 2025","Login > Verify Password","Onboarding","",""
+"","158","Make First Payment - Empty Last Name field Copy","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:35 UTC 2025","passed","Fri Aug 22 08:13:35 UTC 2025","Signup > Make First Payment","Onboarding","",""
+"","158","Set New PIN - Success","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:54 UTC 2025","failed","Fri Aug 22 08:13:55 UTC 2025","Pin/Password Management [R] Copy > Reset PIN > Set New PIN","Settings","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","150","Get Utility [R] - Empty Customer Reference","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:14 UTC 2025","passed","Fri Aug 22 08:14:14 UTC 2025","Get Utility","Misc","",""
+"","306","Verify OTP [R] - Success","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:00 UTC 2025","failed","Fri Aug 22 08:14:01 UTC 2025","Pin/Password Management [R] Copy > Reset Password (For Billers Only) > Verify OTP","Settings","",""
+"","369","Login - Invalid customer reference","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:46 UTC 2025","passed","Fri Aug 22 08:13:47 UTC 2025","Login > Login","Onboarding","",""
+"","159","Verify User Info & ID - Empty NIN","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:28 UTC 2025","passed","Fri Aug 22 08:13:28 UTC 2025","Signup > Verify User Information and ID","Onboarding","",""
+"","167","Manage Biometrics - Success","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:51 UTC 2025","failed","Fri Aug 22 08:13:51 UTC 2025","Login > Manage Biometrics","Onboarding","",""
+"","148","Send OTP [R] - No Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:56 UTC 2025","passed","Fri Aug 22 08:13:57 UTC 2025","Pin/Password Management [R] Copy > Reset PIN > Send OTP","Settings","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","159","Change PIN [R] - Empty PIN","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:02 UTC 2025","passed","Fri Aug 22 08:14:02 UTC 2025","Pin/Password Management [R] Copy > Change PIN","Settings","",""
+"","153","Verify OTP [R] - Empty Customer Ref","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:57 UTC 2025","passed","Fri Aug 22 08:13:57 UTC 2025","Pin/Password Management [R] Copy > Reset PIN > Verify OTP","Settings","",""
+"","154","Verify User Info & ID - Invalid Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:34 UTC 2025","failed","Fri Aug 22 08:13:34 UTC 2025","Signup > Verify User Information and ID","Onboarding","",""
+"","163","Verify Login OTP  - No  token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:49 UTC 2025","passed","Fri Aug 22 08:13:49 UTC 2025","Login > Verify Login OTP","Onboarding","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","158","Change PIN [R] - Empty New PIN Confirmation","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:02 UTC 2025","passed","Fri Aug 22 08:14:03 UTC 2025","Pin/Password Management [R] Copy > Change PIN","Settings","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","185","Change PIN [R] - Success","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:02 UTC 2025","failed","Fri Aug 22 08:14:02 UTC 2025","Pin/Password Management [R] Copy > Change PIN","Settings","",""
+"","298","Verify OTP [R] - Invalid OTP","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:01 UTC 2025","passed","Fri Aug 22 08:14:01 UTC 2025","Pin/Password Management [R] Copy > Reset Password (For Billers Only) > Verify OTP","Settings","",""
+"","304","Send OTP - Success","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:59 UTC 2025","failed","Fri Aug 22 08:14:00 UTC 2025","Pin/Password Management [R] Copy > Reset Password (For Billers Only) > Send OTP","Settings","",""
+"","166","POST - Create PIN - Empty PIN","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:50 UTC 2025","passed","Fri Aug 22 08:13:50 UTC 2025","Login > Create PIN","Onboarding","",""
+"","153","Set new  Password [R] - Invalid Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:59 UTC 2025","passed","Fri Aug 22 08:13:59 UTC 2025","Pin/Password Management [R] Copy > Reset Password (For Billers Only) > Set New Password","Settings","",""
+"","169","Set New PIN - Empty PIN Confirmation","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:55 UTC 2025","passed","Fri Aug 22 08:13:55 UTC 2025","Pin/Password Management [R] Copy > Reset PIN > Set New PIN","Settings","",""
+"","163","Make First Payment - Empty Terms and Condition","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:44 UTC 2025","passed","Fri Aug 22 08:13:45 UTC 2025","Signup > Make First Payment","Onboarding","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","150","Create Subscription [R] - empty customer reference","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:04 UTC 2025","passed","Fri Aug 22 08:14:04 UTC 2025","Create Subscription","Subscription","",""
+"","159","Make First Payment - Incomplete Account Number","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:36 UTC 2025","failed","Fri Aug 22 08:13:36 UTC 2025","Signup > Make First Payment","Onboarding","",""
+"","341","Get Countries [R]","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:16 UTC 2025","passed","Fri Aug 22 08:14:16 UTC 2025","Get Countries","Misc","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","179","Change PIN [R] - Empty Customer Ref.","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:02 UTC 2025","passed","Fri Aug 22 08:14:02 UTC 2025","Pin/Password Management [R] Copy > Change PIN","Settings","",""
+"","305","POST - Send Login OTP","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:47 UTC 2025","failed","Fri Aug 22 08:13:47 UTC 2025","Login > Send Login OTP","Onboarding","",""
+"","571","Verify First Payment - Success","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:45 UTC 2025","passed","Fri Aug 22 08:13:45 UTC 2025","Signup > Verify First Payment","Onboarding","",""
+"","301","Verify OTP [R] - Wrong OTP","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:57 UTC 2025","passed","Fri Aug 22 08:13:57 UTC 2025","Pin/Password Management [R] Copy > Reset PIN > Verify OTP","Settings","",""
+"","2888","Verify User Info & ID - Success","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:24 UTC 2025","failed","Fri Aug 22 08:13:27 UTC 2025","Signup > Verify User Information and ID","Onboarding","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","150","Manage Subscription [R] - No Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:13 UTC 2025","passed","Fri Aug 22 08:14:13 UTC 2025","Manage Subscription","Subscription","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","160","Change PIN [R] - Wrong Current PIN","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:02 UTC 2025","failed","Fri Aug 22 08:14:02 UTC 2025","Pin/Password Management [R] Copy > Change PIN","Settings","",""
+"","149","Set new  Password [R] - No Auth Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:59 UTC 2025","passed","Fri Aug 22 08:13:59 UTC 2025","Pin/Password Management [R] Copy > Reset Password (For Billers Only) > Set New Password","Settings","",""
+"","152","Send OTP [R] - Empty Customer Reference","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:56 UTC 2025","passed","Fri Aug 22 08:13:56 UTC 2025","Pin/Password Management [R] Copy > Reset PIN > Send OTP","Settings","",""
+"","492","Send OTP [R] - Success","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:56 UTC 2025","failed","Fri Aug 22 08:13:56 UTC 2025","Pin/Password Management [R] Copy > Reset PIN > Send OTP","Settings","",""
+"","166","Set new  Password [R] - Success","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:58 UTC 2025","passed","Fri Aug 22 08:13:58 UTC 2025","Pin/Password Management [R] Copy > Reset Password (For Billers Only) > Set New Password","Settings","",""
+"","152","Verify First Payment - Invalid Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:46 UTC 2025","passed","Fri Aug 22 08:13:46 UTC 2025","Signup > Verify First Payment","Onboarding","",""
+"","154","Verify OTP [R] - Empty Customer Ref.","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:01 UTC 2025","passed","Fri Aug 22 08:14:01 UTC 2025","Pin/Password Management [R] Copy > Reset Password (For Billers Only) > Verify OTP","Settings","",""
+"","349","Verify OTP [R] - Success","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:57 UTC 2025","failed","Fri Aug 22 08:13:57 UTC 2025","Pin/Password Management [R] Copy > Reset PIN > Verify OTP","Settings","",""
+"","321","Customers [R]","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:20 UTC 2025","passed","Fri Aug 22 08:14:21 UTC 2025","Customers","Dashboard","",""
+"","152","Manage Biometrics - Empty PIN","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:52 UTC 2025","failed","Fri Aug 22 08:13:52 UTC 2025","Login > Manage Biometrics","Onboarding","",""
+"","150","Lookup Bank account [R] - empty token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:19 UTC 2025","passed","Fri Aug 22 08:14:19 UTC 2025","Lookup Bank Account","Misc","",""
+"","165","Set New PIN - Empty PIN and PIN Confirmation","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:55 UTC 2025","passed","Fri Aug 22 08:13:55 UTC 2025","Pin/Password Management [R] Copy > Reset PIN > Set New PIN","Settings","",""
+"","943","Make First Payment - Success","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:34 UTC 2025","passed","Fri Aug 22 08:13:35 UTC 2025","Signup > Make First Payment","Onboarding","",""
+"","155","Verify User Info & ID - No Auth Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:34 UTC 2025","failed","Fri Aug 22 08:13:34 UTC 2025","Signup > Verify User Information and ID","Onboarding","",""
+"","178","Verify OTP [R] - Invalid Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:58 UTC 2025","passed","Fri Aug 22 08:13:58 UTC 2025","Pin/Password Management [R] Copy > Reset PIN > Verify OTP","Settings","",""
+"","188","Verify OTP [R] - Empty Biller Code","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:58 UTC 2025","passed","Fri Aug 22 08:13:58 UTC 2025","Pin/Password Management [R] Copy > Reset PIN > Verify OTP","Settings","",""
+"","150","Manage Biometrics -  Invalid Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:52 UTC 2025","passed","Fri Aug 22 08:13:52 UTC 2025","Login > Manage Biometrics","Onboarding","",""
+"","148","Send OTP [R] - Invalid Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:56 UTC 2025","passed","Fri Aug 22 08:13:56 UTC 2025","Pin/Password Management [R] Copy > Reset PIN > Send OTP","Settings","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","149","Change PIN [R] - Invalid Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:03 UTC 2025","passed","Fri Aug 22 08:14:03 UTC 2025","Pin/Password Management [R] Copy > Change PIN","Settings","",""
+"","159","Lookup Bank account [R] - empty customer reference","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:19 UTC 2025","passed","Fri Aug 22 08:14:19 UTC 2025","Lookup Bank Account","Misc","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","152","Create Subscription [R] - empty required field","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:04 UTC 2025","passed","Fri Aug 22 08:14:04 UTC 2025","Create Subscription","Subscription","",""
+"","169","Make First Payment - Invalid NIN","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:35 UTC 2025","passed","Fri Aug 22 08:13:35 UTC 2025","Signup > Make First Payment","Onboarding","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","161","Manage Subscription [R]","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:11 UTC 2025","passed","Fri Aug 22 08:14:12 UTC 2025","Manage Subscription","Subscription","",""
+"","151","Verify Login OTP  - Invalid customer reference","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:49 UTC 2025","passed","Fri Aug 22 08:13:49 UTC 2025","Login > Verify Login OTP","Onboarding","",""
+"","901","Lookup Bank account [R]","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:17 UTC 2025","passed","Fri Aug 22 08:14:18 UTC 2025","Lookup Bank Account","Misc","",""
+"List of data to Cach offlne
+
+1. Accounts
+    
+    1. All accounts and their last balance
+        
+2. Loan Limits
+    
+3. Membership status
+    
+4. Onboard Approval Status","152","Get Banks [R]  - Invalid token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:16 UTC 2025","passed","Fri Aug 22 08:14:16 UTC 2025","Get Banks","Misc","",""
+"","157","POST - Create PIN - Empty PIN Confirmation","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:50 UTC 2025","passed","Fri Aug 22 08:13:50 UTC 2025","Login > Create PIN","Onboarding","",""
+"","974","Lookup Bank account [R] - Invalid account number","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:18 UTC 2025","passed","Fri Aug 22 08:14:19 UTC 2025","Lookup Bank Account","Misc","",""
+"","154","Create Password - Empty Password Confirmation","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:53 UTC 2025","passed","Fri Aug 22 08:13:53 UTC 2025","Login > Create Password","Onboarding","",""
+"","154","Logout - No Auth Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:54 UTC 2025","passed","Fri Aug 22 08:13:54 UTC 2025","Logout","Onboarding","",""
+"","175","Verify User Info & ID - Empty email","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:33 UTC 2025","passed","Fri Aug 22 08:13:33 UTC 2025","Signup > Verify User Information and ID","Onboarding","",""
+"","148","Manage Biometrics -  No Auth Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:52 UTC 2025","passed","Fri Aug 22 08:13:52 UTC 2025","Login > Manage Biometrics","Onboarding","",""
+"","151","Verify Password - Invalid Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:54 UTC 2025","passed","Fri Aug 22 08:13:54 UTC 2025","Login > Verify Password","Onboarding","",""
+"","225","POST - Verify PIN","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:50 UTC 2025","failed","Fri Aug 22 08:13:51 UTC 2025","Login > Verify PIN","Onboarding","",""
+"","167","POST - Create PIN - Confirm PIN Mismatch","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:49 UTC 2025","passed","Fri Aug 22 08:13:50 UTC 2025","Login > Create PIN","Onboarding","",""
+"","152","Send OTP - No Auth Token","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:14:00 UTC 2025","passed","Fri Aug 22 08:14:00 UTC 2025","Pin/Password Management [R] Copy > Reset Password (For Billers Only) > Send OTP","Settings","",""
+"","161","Verify User Info & ID - Empty Date of Birth","OnePipe PWA Instore - Automated Tests","Fri Aug 22 08:13:33 UTC 2025","passed","Fri Aug 22 08:13:33 UTC 2025","Signup > Verify User Information and ID","Onboarding","",""
