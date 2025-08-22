@@ -10622,6 +10622,30 @@
 					"item": [
 						{
 							"name": "Cancel Subscription [R]",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "fa7ebd84-bca2-43e6-91f6-a4a8fd02029d",
+										"exec": [
+											"const jsonData = pm.response.json();\r",
+											"\r",
+											"pm.test(\"Check if the status is successful\", function () {\r",
+											"    pm.expect(jsonData.status).to.eql(\"Successful\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Check that data returns correctly\", function () {\r",
+											"    pm.expect(jsonData.data).to.not.eql(null);\r",
+											"    pm.expect(jsonData.data.provider_response).to.be.an(\"object\");\r",
+											"    pm.expect(jsonData.data.provider_response).to.have.property(\"status\");\r",
+											"\r",
+											"}"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
 							"id": "f813faa3-12af-4ea5-b89d-8673c9832bf6",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -10637,7 +10661,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"action\": \"subscription.cancel\",\n    \"data\": {\n        \"customer_ref\": \"{{customer_ref}}\",\n        \"biller_code\": \"010\",\n        \"subscription_id\": \"18984\"\n    }\n}",
+									"raw": "{\n    \"action\": \"subscription.cancel\",\n    \"data\": {\n        \"customer_ref\": \"{{customer_ref}}\",\n        \"biller_code\": \"010\",\n        \"subscription_id\": \"{{current_subscription_id}}\"\n    }\n}",
 									"options": {
 										"raw": {
 											"language": "json"
