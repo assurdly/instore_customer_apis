@@ -10641,7 +10641,9 @@
 											"\r",
 											"})\r",
 											"\r",
-											"pm.collectionVariables.set(\"inactive_sub_id\", jsonData.data.provider_response.subscription_id);"
+											"pm.test(\"Set subscription id here as a variable\", function () {\r",
+											" pm.collectionVariables.set(\"inactive_sub_id\", jsonData.data.provider_response.subscription_id);\r",
+											"})"
 										],
 										"type": "text/javascript",
 										"packages": {}
@@ -10676,6 +10678,102 @@
 							"response": [
 								{
 									"id": "572cc1dc-593e-4432-8448-adb368207654",
+									"name": "Cancel Subscription",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"action\": \"subscription.cancel\",\n    \"data\": {\n        \"customer_ref\": \"1234567890\",\n        \"biller_code\": \"\",\n        \"subscription_id\": \"\"\n    }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{url}}/misc/cancel-sub"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [
+										{
+											"expires": "Invalid Date",
+											"domain": "",
+											"path": ""
+										}
+									],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"Successful\",\n    \"message\": \"Transaction processed successfully\",\n    \"data\": {\n        \"provider_response_code\": \"00\",\n        \"provider\": \"NIBSS\",\n        \"errors\": null,\n        \"error\": null,\n        \"provider_response\": {},\n        \"client_info\": null\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Cancel Subscription [R] Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "fa7ebd84-bca2-43e6-91f6-a4a8fd02029d",
+										"exec": [
+											"const jsonData = pm.response.json();\r",
+											"\r",
+											"pm.test(\"Check if the status is successful\", function () {\r",
+											"    pm.expect(jsonData.status).to.eql(\"Successful\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Check that data returns correctly\", function () {\r",
+											"    pm.expect(jsonData.data).to.not.eql(null);\r",
+											"    pm.expect(jsonData.data.provider_response).to.be.an(\"object\");\r",
+											"    pm.expect(jsonData.data.provider_response).to.have.property(\"status\");\r",
+											"\r",
+											"})\r",
+											"\r",
+											"pm.test(\"Set subscription id here as a variable\", function () {\r",
+											" pm.collectionVariables.set(\"inactive_sub_id\", jsonData.data.provider_response.subscription_id);\r",
+											"})"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "2701cddf-ee79-499d-84fc-aebbb8c817dd",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{Token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"action\": \"subscription.cancel\",\n    \"data\": {\n        \"customer_ref\": \"{{customer_ref}}\",\n        \"biller_code\": \"010\",\n        \"subscription_id\": \"{{current_subscription_id}}\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}",
+								"description": "List of data to Cach offlne\n\n1. Accounts\n    \n    1. All accounts and their last balance\n        \n2. Loan Limits\n    \n3. Membership status\n    \n4. Onboard Approval Status"
+							},
+							"response": [
+								{
+									"id": "1510d128-ea99-4d21-8dc2-0d1b4a2c4db2",
 									"name": "Cancel Subscription",
 									"originalRequest": {
 										"method": "POST",
@@ -13397,6 +13495,10 @@
 		},
 		{
 			"key": "wrong_token",
+			"value": ""
+		},
+		{
+			"key": "inactive_sub_id",
 			"value": ""
 		}
 	]
