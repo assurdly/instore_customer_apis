@@ -1,0 +1,7 @@
+{
+  "action": "auth.verify-first-payment",
+  "data": {
+    "customer_ref": "2349032456062",
+    "transaction_ref": "PWA-INST-392f776a-beeb-4f03-a5df-f65ce5cb3008"
+  }
+}
