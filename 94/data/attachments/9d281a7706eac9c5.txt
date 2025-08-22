@@ -1,0 +1,9 @@
+{
+    "action": "subscription.manage",
+    "data": {
+        "customer_ref": "",
+        "biller_code": "biller_code",
+        "subscription_id": "19312",
+        "action": "pause" 
+    }
+}
