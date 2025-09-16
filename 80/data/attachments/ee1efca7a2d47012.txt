@@ -1,1 +1,0 @@
-{"status":"Failed","message":"Unsupported action: auth.logout","data":{"provider_response_code":500,"error":{"code":500,"message":"Unsupported action: auth.logout"},"errors":[{"code":500,"message":"Unsupported action: auth.logout"}]}}
