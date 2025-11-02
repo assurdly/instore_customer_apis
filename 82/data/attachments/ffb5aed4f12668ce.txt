@@ -1,8 +1,0 @@
-{
-  "action": "auth.signup",
-  "data": {
-    "customer_ref": "2349032456062",
-    "country": "NG"
-
-  }
-}

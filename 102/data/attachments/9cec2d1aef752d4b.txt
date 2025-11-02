@@ -1,0 +1,9 @@
+{
+    "action": "auth.verify-pi",
+    "data": {
+        "customer_ref": "1234567890123",
+        "pin": "12345",
+        "user_agent": "device-123",
+        "ip_address": "127.0.0.1"
+    }
+}
